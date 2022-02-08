@@ -14,10 +14,12 @@ const Header = () => {
         <div className={classes.logo}>
           <p>KB</p>
         </div>
-        <nav className={classes.navigation}>
-          <ul>
+        <nav className={classes.nav}>
+          <ul className={classes.navList}>
             <li>
-              <Link href="/">Start</Link>
+              <Link className={classes.navListItem} href="/">
+                Start
+              </Link>
             </li>
             <li>
               <Link href="/about">O mnie</Link>

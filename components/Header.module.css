@@ -1,0 +1,18 @@
+.container {
+  /* background: red; */
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+  align-items: center;
+  height: 70px;
+}
+.nav {
+  width: 30%;
+}
+
+.navList {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  color: inherit;
+}
