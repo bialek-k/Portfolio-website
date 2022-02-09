@@ -1,34 +1,65 @@
 .container {
-  margin-top: 120px;
+  margin-top: 240px;
 
   .hero {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 100px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 250px;
 
     .heroPhoto {
-      width: 180px;
+      // background: rgb(66, 66, 66);
+      background: url(../assets/hero_photo.jpeg);
+      background-position: 0px 0px;
+      background-size: cover;
+      width: 460px;
+      height: 460px;
+      border-radius: 50%;
+      border: 25px solid white;
+      box-shadow: 0px 0px 20px 10px #c6c6c6;
     }
+    // .heroPhoto {
+    //   width: 250px;
+    // }
 
     .heroDescription {
       width: 50%;
-      padding-left: 10px;
+      // padding-left: 10px;
+      .desc {
+        margin-top: 15px;
+      }
 
       & p {
-        font-size: 1rem;
+        font-size: 1.5rem;
       }
 
       & h1 {
-        font-size: 3.3rem;
+        font-size: 3.9rem;
+      }
+
+      .buttons {
+        width: 100%;
+        // background: red;
+        display: flex;
+        justify-content: flex-end;
+
+        & button {
+          padding: 10px;
+          background: none;
+          margin: 10px;
+          border-radius: 10px;
+          border: 1px solid black;
+          font-size: 1.3rem;
+        }
       }
     }
   }
 }
 .projects {
   height: 500px;
+  // background: red;
 
   h1 {
-    font-size: 1.9rem;
+    font-size: 3.8rem;
   }
 }

@@ -9,16 +9,20 @@ export default function Home() {
     <div className={classes.container}>
       <section className={classes.hero}>
         <div className={classes.heroPhoto}>
-          <Image src={heroPhoto} alt="profilowe" layout="responsive" />
+          {/* <Image src={heroPhoto} alt="profilowe" layout="responsive" /> */}
         </div>
         <div className={classes.heroDescription}>
           <p>Web Developer</p>
           <h1>Krzysztof Białek</h1>
-          <p>
+          <p className={classes.desc}>
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut lavbore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud{" "}
           </p>
+          <div className={classes.buttons}>
+            <button>Portfolio</button>
+            <button>Github</button>
+          </div>
         </div>
       </section>
       <section className={classes.projects}>
