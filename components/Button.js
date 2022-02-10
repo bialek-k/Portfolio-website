@@ -3,7 +3,7 @@ import classes from "./Button.module.css";
 
 const Button = ({ name, sec }) => {
   return (
-    <button className={sec ? classes[`btn`] : classes[`btn secondary`]}>
+    <button className={`${classes["btn"]} ${sec && classes.secondary}`}>
       {name}
     </button>
   );

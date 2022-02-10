@@ -1,4 +1,5 @@
 .container {
   margin: 0 auto;
   width: min(1024px, 85vw);
+  background-color: rgb(216, 216, 216);
 }

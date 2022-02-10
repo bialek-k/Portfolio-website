@@ -1,54 +1,47 @@
-.container {
-  margin-top: 240px;
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  // margin-bottom: 250px;
+  margin-top: 10px;
+  // display: none;
 
-  .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 250px;
+  .heroPhoto {
+    background: url(../assets/hero_photo.jpeg);
+    background-position: 0px 0px;
+    background-size: cover;
+    width: 460px;
+    height: 460px;
+    border-radius: 50%;
+    border: 25px solid white;
+    box-shadow: 0px 0px 20px 10px #c6c6c6;
+  }
 
-    .heroPhoto {
-      // background: rgb(66, 66, 66);
-      background: url(../assets/hero_photo.jpeg);
-      background-position: 0px 0px;
-      background-size: cover;
-      width: 460px;
-      height: 460px;
-      border-radius: 50%;
-      border: 25px solid white;
-      box-shadow: 0px 0px 20px 10px #c6c6c6;
+  .heroDescription {
+    width: 50%;
+    .desc {
+      margin-top: 15px;
     }
-    // .heroPhoto {
-    //   width: 250px;
-    // }
 
-    .heroDescription {
-      width: 50%;
-      // padding-left: 10px;
-      .desc {
-        margin-top: 15px;
-      }
+    & p {
+      font-size: 1.5rem;
+    }
 
-      & p {
-        font-size: 1.5rem;
-      }
+    & h1 {
+      font-size: 3.9rem;
+    }
 
-      & h1 {
-        font-size: 3.9rem;
-      }
-
-      .buttons {
-        width: 100%;
-        margin-top: 50px;
-        display: flex;
-        justify-content: flex-end;
-      }
+    .buttons {
+      width: 100%;
+      margin-top: 50px;
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }
+
 .projects {
-  height: 500px;
-  // background: red;
+  padding-top: 200px;
 
   h1 {
     font-size: 3.8rem;

@@ -4,10 +4,11 @@ import classes from "../styles/Home.module.scss";
 
 import heroPhoto from "../assets/hero_photo.jpeg";
 import Button from "../components/Button";
+import ProjectsList from "../components/ProjectsList";
 
 export default function Home() {
   return (
-    <div className={classes.container}>
+    <>
       <section className={classes.hero}>
         <div className={classes.heroPhoto}>
           {/* <Image src={heroPhoto} alt="profilowe" layout="responsive" /> */}
@@ -21,14 +22,15 @@ export default function Home() {
             ad minim veniam, quis nostrud{" "}
           </p>
           <div className={classes.buttons}>
-            <Button name={"Portfolio"} sec />
+            <Button name={"Portfolio"} />
             <Button name={"Github"} sec />
           </div>
         </div>
       </section>
       <section className={classes.projects}>
         <h1>Projekty</h1>
+        <ProjectsList />
       </section>
-    </div>
+    </>
   );
 }
