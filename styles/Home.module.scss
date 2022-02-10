@@ -39,18 +39,9 @@
 
       .buttons {
         width: 100%;
-        // background: red;
+        margin-top: 50px;
         display: flex;
         justify-content: flex-end;
-
-        & button {
-          padding: 10px;
-          background: none;
-          margin: 10px;
-          border-radius: 10px;
-          border: 1px solid black;
-          font-size: 1.3rem;
-        }
       }
     }
   }

@@ -3,6 +3,7 @@ import Image from "next/image";
 import classes from "../styles/Home.module.scss";
 
 import heroPhoto from "../assets/hero_photo.jpeg";
+import Button from "../components/Button";
 
 export default function Home() {
   return (
@@ -20,8 +21,8 @@ export default function Home() {
             ad minim veniam, quis nostrud{" "}
           </p>
           <div className={classes.buttons}>
-            <button>Portfolio</button>
-            <button>Github</button>
+            <Button name={"Portfolio"} sec />
+            <Button name={"Github"} sec />
           </div>
         </div>
       </section>

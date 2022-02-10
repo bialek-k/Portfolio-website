@@ -1,0 +1,15 @@
+.btn {
+  width: 200px;
+  margin: 0px 10px;
+  height: 70px;
+  background: white;
+  border: 3px solid rgba(253, 187, 17, 0.8);
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+
+.secondary {
+  background: rgba(253, 187, 17, 0.8);
+  color: white;
+}
