@@ -1,8 +1,8 @@
 .hero {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  // margin-bottom: 250px;
+  align-items: center;
+
   margin-top: 10px;
   // display: none;
 
@@ -10,10 +10,10 @@
     background: url(../assets/hero_photo.jpeg);
     background-position: 0px 0px;
     background-size: cover;
-    width: 460px;
-    height: 460px;
+    width: 420px;
+    height: 420px;
     border-radius: 50%;
-    border: 25px solid white;
+    border: 15px solid white;
     box-shadow: 0px 0px 20px 10px #c6c6c6;
   }
 
@@ -24,7 +24,7 @@
     }
 
     & p {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
 
     & h1 {

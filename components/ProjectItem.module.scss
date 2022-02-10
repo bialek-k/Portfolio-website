@@ -1,0 +1,35 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  // background: blue;
+  padding-top: 100px;
+  margin: 80px 0px;
+
+  .description {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    // background: red;
+
+    .descriptionShort {
+      margin-bottom: 25px;
+      text-align: justify;
+    }
+
+    .btn {
+      margin-bottom: 25px;
+    }
+    .tech {
+      & p {
+        word-spacing: 30px;
+      }
+    }
+  }
+}
+
+.cardRevers {
+  flex-direction: row-reverse;
+  .description {
+    text-align: right;
+  }
+}

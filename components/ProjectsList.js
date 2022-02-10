@@ -1,31 +1,38 @@
-import React from "react";
-import Image from "next/image";
-import Button from "./Button";
-import classes from "./ProjectList.module.scss";
+import ProjectItem from "./ProjectItem";
 
 import sucharPhoto from "../assets/suchar-romana.png";
+import WeatherApp from "../assets/weather-app.png";
+import PortfolioWebsite from "../assets/portfolio-website.png";
 
 const ProjectsList = () => {
   return (
-    <div className={classes.card}>
-      <div className={classes.photo}>
-        <Image src={sucharPhoto} />
-      </div>
-      <div className={classes.desc}>
-        <h1>SucharRomana</h1>
-        <p>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod
-        </p>
-        <div className={classes.btn}>
-          <Button name={"Demo"} sec />
-          <Button name={"Github"} />
-        </div>
-        <div className={classes.tech}>
-          <p>HTML CSS JavaScript React</p>
-        </div>
-      </div>
-    </div>
+    <>
+      <ProjectItem
+        img={sucharPhoto}
+        title={"Suchar Romana"}
+        desc={
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lavbore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+        }
+        tech={"HTML CSS JavaScript React"}
+      />
+      <ProjectItem
+        img={WeatherApp}
+        title={"Weather App"}
+        desc={
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lavbore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+        }
+        tech={"HTML CSS JavaScript React"}
+        rev
+      />
+      <ProjectItem
+        img={PortfolioWebsite}
+        title={"Portfolio Website"}
+        desc={
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lavbore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+        }
+        tech={"HTML CSS JavaScript React Next.js"}
+      />
+    </>
   );
 };
 

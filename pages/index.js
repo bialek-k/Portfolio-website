@@ -1,8 +1,5 @@
-import Head from "next/head";
-import Image from "next/image";
 import classes from "../styles/Home.module.scss";
 
-import heroPhoto from "../assets/hero_photo.jpeg";
 import Button from "../components/Button";
 import ProjectsList from "../components/ProjectsList";
 
@@ -10,9 +7,7 @@ export default function Home() {
   return (
     <>
       <section className={classes.hero}>
-        <div className={classes.heroPhoto}>
-          {/* <Image src={heroPhoto} alt="profilowe" layout="responsive" /> */}
-        </div>
+        <div className={classes.heroPhoto}></div>
         <div className={classes.heroDescription}>
           <p>Web Developer</p>
           <h1>Krzysztof Białek</h1>
@@ -22,7 +17,6 @@ export default function Home() {
             ad minim veniam, quis nostrud{" "}
           </p>
           <div className={classes.buttons}>
-            <Button name={"Portfolio"} />
             <Button name={"Github"} sec />
           </div>
         </div>
