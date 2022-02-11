@@ -14,6 +14,8 @@ const ProjectsList = () => {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lavbore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
         }
         tech={"HTML CSS JavaScript React"}
+        github={"https://github.com/bialek-k/Sucharromana-app"}
+        demo={"https://bialek-k.github.io/Sucharromana-app/"}
       />
       <ProjectItem
         img={WeatherApp}
@@ -23,6 +25,8 @@ const ProjectsList = () => {
         }
         tech={"HTML CSS JavaScript React"}
         rev
+        github={"https://github.com/bialek-k/Weather-App"}
+        demo={"https://bialek-k.github.io/Weather-App/"}
       />
       <ProjectItem
         img={PortfolioWebsite}
@@ -31,6 +35,7 @@ const ProjectsList = () => {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lavbore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
         }
         tech={"HTML CSS JavaScript React Next.js"}
+        github={"https://github.com/bialek-k"}
       />
     </>
   );

@@ -2,9 +2,7 @@ import Image from "next/image";
 import Button from "./Button";
 import classes from "./ProjectItem.module.scss";
 
-// className={`${classes["btn"]} ${sec && classes.secondary}
-
-const ProjectItem = ({ img, title, desc, tech, rev }) => {
+const ProjectItem = ({ img, title, desc, tech, rev, github }) => {
   return (
     <div className={`${classes["card"]} ${rev && classes.cardRevers}`}>
       <div className={classes.photo}>
@@ -15,7 +13,7 @@ const ProjectItem = ({ img, title, desc, tech, rev }) => {
         <p className={classes.descriptionShort}>{desc}</p>
         <div className={classes.btn}>
           <Button name={"Demo"} sec sm />
-          <Button name={"Github"} sm />
+          <Button name={"Github"} sm href={github} />
         </div>
         <div className={classes.tech}>
           <p>{tech}</p>
