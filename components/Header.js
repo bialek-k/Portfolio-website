@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import classes from "./Header.module.css";
+import classes from "./Header.module.scss";
 import { route } from "next/dist/server/router";
 
 const Header = () => {
