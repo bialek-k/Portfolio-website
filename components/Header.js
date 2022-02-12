@@ -1,8 +1,12 @@
 import Link from "next/link";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import classes from "./Header.module.css";
+import { route } from "next/dist/server/router";
 
 const Header = () => {
+  const router = useRouter();
+
   return (
     <>
       <Head>
@@ -18,17 +22,36 @@ const Header = () => {
           <ul className={classes.navList}>
             <li>
               <Link href="/">
-                <a>Start</a>
+                <a
+                  className={`${classes["link"]} ${
+                    router.pathname === "/" && classes.active
+                  }`}
+                >
+                  {" "}
+                  Start
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/blog">
-                <a>Blog</a>
+                <a
+                  className={`${classes["link"]} ${
+                    router.pathname === "/blog" && classes.active
+                  }`}
+                >
+                  Blog
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/contact">
-                <a>Kontakt</a>
+                <a
+                  className={`${classes["link"]} ${
+                    router.pathname === "/contact" && classes.active
+                  }`}
+                >
+                  Kontakt
+                </a>
               </Link>
             </li>
           </ul>

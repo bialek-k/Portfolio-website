@@ -32,16 +32,26 @@
   color: inherit;
 }
 
-.navList li a {
+/* .navList li a {
+  color: inherit;
+  font-size: 20px;
+  text-decoration: none;
+} */
+.link {
   color: inherit;
   font-size: 20px;
   text-decoration: none;
 }
 
-.navList li a::after {
+.active {
+  color: rgba(253, 187, 17, 0.8);
+  /* font-weight: bold; */
+}
+
+/* .navList li a::after {
   content: "";
   display: block;
   width: auto;
   height: 3px;
   background-color: rgba(253, 187, 17, 0.8);
-}
+} */
