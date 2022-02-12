@@ -27,7 +27,6 @@ const Header = () => {
                     router.pathname === "/" && classes.active
                   }`}
                 >
-                  {" "}
                   Start
                 </a>
               </Link>

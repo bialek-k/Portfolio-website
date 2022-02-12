@@ -8,9 +8,8 @@ const Button = ({ name, sec, sm, onClick, href }) => {
         sm && classes.small
       }`}
       onClick={onClick && onClick}
-      href={href}
     >
-      {name}
+      <a href={href}>{name}</a>
     </button>
   );
 };
