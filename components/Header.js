@@ -17,15 +17,19 @@ const Header = () => {
         <nav className={classes.nav}>
           <ul className={classes.navList}>
             <li>
-              <Link className={classes.navListItem} href="/">
-                Start
+              <Link href="/">
+                <a>Start</a>
               </Link>
             </li>
             <li>
-              <Link href="/blog">Blog</Link>
+              <Link href="/blog">
+                <a>Blog</a>
+              </Link>
             </li>
             <li>
-              <Link href="/contact">Kontakt</Link>
+              <Link href="/contact">
+                <a>Kontakt</a>
+              </Link>
             </li>
           </ul>
         </nav>
