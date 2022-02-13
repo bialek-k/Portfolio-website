@@ -2,7 +2,6 @@ import Link from "next/link";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import classes from "./Header.module.scss";
-import { route } from "next/dist/server/router";
 
 const Header = () => {
   const router = useRouter();
@@ -16,7 +15,15 @@ const Header = () => {
       </Head>
       <header className={classes.container}>
         <div className={classes.logo}>
-          <p>KB</p>
+          <Link href="/">
+            <a
+              className={`${classes["link"]} ${
+                router.pathname === "/" && classes.active
+              }`}
+            >
+              <p>KB</p>
+            </a>
+          </Link>
         </div>
         <nav className={classes.nav}>
           <ul className={classes.navList}>

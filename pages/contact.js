@@ -1,3 +1,4 @@
+import Link from "next/link";
 import classes from "../styles/contact.module.scss";
 import Button from "../components/Button";
 
@@ -28,7 +29,9 @@ const contact = () => {
           />
         </svg>
 
-        <p>krzysztof.bialek1@gmail.com</p>
+        <Link href="mailto:krzysztof.bialek1@gmail.com">
+          <p>krzysztof.bialek1@gmail.com</p>
+        </Link>
       </div>
       <form onSubmit={submitHandler}>
         <div className={classes.userInfo}>

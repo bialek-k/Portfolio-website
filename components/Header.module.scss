@@ -20,6 +20,9 @@ $base-color: rgba(253, 187, 17, 0.8);
       color: white;
       font-weight: bold;
     }
+    & a {
+      text-decoration: none;
+    }
   }
 }
 
