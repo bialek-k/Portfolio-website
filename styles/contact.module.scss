@@ -49,10 +49,18 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 30px auto;
     align-items: center;
     // background: red;
     width: 80%;
+
+    .errorText {
+      color: red;
+      font-size: 0.9rem;
+      margin: 15px 0px;
+      width: 100%;
+      text-align: left;
+    }
 
     & input {
       font-size: 0.8rem;
@@ -66,6 +74,7 @@
   .userInfo {
     display: flex;
     justify-content: space-between;
+    position: relative;
     width: 100%;
     & input {
       width: 49%;
@@ -87,5 +96,10 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
+  }
+
+  .error {
+    background: rgb(250, 211, 211);
+    border: 1px solid red;
   }
 }

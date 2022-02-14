@@ -5,6 +5,7 @@ import Button from "../components/Button";
 
 const contact = () => {
   const [name, setName] = useState("");
+  const [nameIsValid, setNameIsValid] = useState(true);
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
@@ -12,6 +13,7 @@ const contact = () => {
     e.preventDefault();
 
     if (name.trim() == "") {
+      setNameIsValid(false);
       return;
     }
 
@@ -53,25 +55,35 @@ const contact = () => {
         <div className={classes.userInfo}>
           <input
             type="text"
-            placeholder="imie i nazwisko"
+            placeholder={
+              !nameIsValid ? "musze poznać Twoje imię" : "imię i nazwisko"
+            }
             value={name}
+            className={`${classes[""]} ${!nameIsValid && classes.error}`}
             onChange={(e) => setName(e.target.value)}
           />
+
           <input
-            type="email"
-            placeholder="email"
+            type="text"
+            placeholder={!nameIsValid ? "proszę podać email" : "email"}
             value={email}
+            className={`${classes[""]} ${!nameIsValid && classes.error}`}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
+
         <div className={classes.message}>
           <input
             type="text"
-            placeholder="Twoja wiadomość"
+            placeholder={
+              !nameIsValid ? "wystarczy jedno zdanie :)" : "wiadomość"
+            }
             value={message}
+            className={`${classes[""]} ${!nameIsValid && classes.error}`}
             onChange={(e) => setMessage(e.target.value)}
           />
         </div>
+
         <div className={classes.action}>
           <Button sec name="Wyślij" type="submit" sm />
         </div>
