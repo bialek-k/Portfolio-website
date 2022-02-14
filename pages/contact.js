@@ -1,10 +1,26 @@
+import { useState } from "react";
 import Link from "next/link";
 import classes from "../styles/contact.module.scss";
 import Button from "../components/Button";
 
 const contact = () => {
-  const submitHandler = () => {
-    console.log("submited");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    if (name.trim() == "") {
+      return;
+    }
+
+    console.log("name:", name, "email:", email, "message:", message);
+    console.log(name, email, message);
+
+    setName("");
+    setEmail("");
+    setMessage("");
   };
 
   return (
@@ -35,11 +51,26 @@ const contact = () => {
       </div>
       <form onSubmit={submitHandler}>
         <div className={classes.userInfo}>
-          <input type="text" placeholder="imie i nazwisko" />
-          <input type="email" placeholder="email" />
+          <input
+            type="text"
+            placeholder="imie i nazwisko"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <input
+            type="email"
+            placeholder="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </div>
         <div className={classes.message}>
-          <input type="text" placeholder="Twoja wiadomość" />
+          <input
+            type="text"
+            placeholder="Twoja wiadomość"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
         </div>
         <div className={classes.action}>
           <Button sec name="Wyślij" type="submit" sm />
