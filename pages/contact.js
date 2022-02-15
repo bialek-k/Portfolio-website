@@ -1,29 +1,18 @@
-import { useState } from "react";
 import Link from "next/link";
 import classes from "../styles/contact.module.scss";
 import Button from "../components/Button";
+import { useForm } from "react-hook-form";
 
 const contact = () => {
-  const [name, setName] = useState("");
-  const [nameIsValid, setNameIsValid] = useState(true);
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const {
+    register,
+    handleSubmit,
+    setError,
+    formState: { errors },
+  } = useForm();
 
-  const submitHandler = (e) => {
-    e.preventDefault();
-
-    if (name.trim() == "") {
-      setNameIsValid(false);
-      return;
-    }
-
-    console.log("name:", name, "email:", email, "message:", message);
-    console.log(name, email, message);
-
-    setName("");
-    setEmail("");
-    setMessage("");
-  };
+  const onSubmit = (data) => console.log(data);
+  const { onChange, ...rest } = register("name");
 
   return (
     <div className={classes.container}>
@@ -32,7 +21,45 @@ const contact = () => {
       </div>
       <div className={classes.title}>
         <h1>Bądźmy w kontakcie!</h1>
-        <svg
+        <Link href="mailto:krzysztof.bialek1@gmail.com">
+          <p>krzysztof.bialek1@gmail.com</p>
+        </Link>
+      </div>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className={classes.userInfo}>
+          <input
+            {...register("name", { required: true })}
+            placeholder="Imię i nazwisko"
+          />
+          <input {...register("email")} placeholder="email" />
+        </div>
+
+        <div className={classes.message}>
+          <input
+            onChange={(e) => {
+              setError("name", {
+                type: "manual",
+                message: "Dont Forget Your Username Should Be Cool!",
+              });
+              onChange(e);
+            }}
+            {...rest}
+          />
+          {errors.name && <p>{errors.name.message}</p>}
+        </div>
+
+        <div className={classes.action}>
+          <Button sec name="Wyślij" type="submit" sm />
+        </div>
+      </form>
+    </div>
+  );
+};
+
+export default contact;
+
+/*
+<svg
           width="234"
           height="97"
           viewBox="0 0 234 97"
@@ -46,50 +73,4 @@ const contact = () => {
             fill="#474747"
           />
         </svg>
-
-        <Link href="mailto:krzysztof.bialek1@gmail.com">
-          <p>krzysztof.bialek1@gmail.com</p>
-        </Link>
-      </div>
-      <form onSubmit={submitHandler}>
-        <div className={classes.userInfo}>
-          <input
-            type="text"
-            placeholder={
-              !nameIsValid ? "musze poznać Twoje imię" : "imię i nazwisko"
-            }
-            value={name}
-            className={`${classes[""]} ${!nameIsValid && classes.error}`}
-            onChange={(e) => setName(e.target.value)}
-          />
-
-          <input
-            type="text"
-            placeholder={!nameIsValid ? "proszę podać email" : "email"}
-            value={email}
-            className={`${classes[""]} ${!nameIsValid && classes.error}`}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-
-        <div className={classes.message}>
-          <input
-            type="text"
-            placeholder={
-              !nameIsValid ? "wystarczy jedno zdanie :)" : "wiadomość"
-            }
-            value={message}
-            className={`${classes[""]} ${!nameIsValid && classes.error}`}
-            onChange={(e) => setMessage(e.target.value)}
-          />
-        </div>
-
-        <div className={classes.action}>
-          <Button sec name="Wyślij" type="submit" sm />
-        </div>
-      </form>
-    </div>
-  );
-};
-
-export default contact;
+*/
