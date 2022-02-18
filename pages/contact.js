@@ -1,126 +1,34 @@
+import { useState } from "react";
+
 import Link from "next/link";
-import classes from "../styles/contact.module.scss";
-import Button from "../components/Button";
-import { useForm } from "react-hook-form";
 import Image from "next/image";
+
+import styles from "../styles/contact.module.scss";
 import heroPhoto from "../public/images/hero_photo.jpeg";
-import { ErrorMessage } from "@hookform/error-message";
+import Form from "../components/Form";
 
 const contact = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+  const [submitted, setSubmitted] = useState(false);
 
   return (
-    <div className={classes.container}>
-      <div className={classes.photo}>
-        <Image src={heroPhoto} className={classes.photoItem} />
+    <>
+      <div className={styles.container}>
+        <div className={styles.photo}>
+          <Image src={heroPhoto} className={styles.photoItem} />
+        </div>
+        <div className={styles.title}>
+          <h1>Bądźmy w kontakcie!</h1>
+          <Link href="mailto:krzysztof.bialek1@gmail.com">
+            <p>krzysztof.bialek1@gmail.com</p>
+          </Link>
+        </div>
       </div>
-      <div className={classes.title}>
-        <h1>Bądźmy w kontakcie!</h1>
-        <Link href="mailto:krzysztof.bialek1@gmail.com">
-          <p>krzysztof.bialek1@gmail.com</p>
-        </Link>
-      </div>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className={classes.userInfo}>
-          <div className={classes.halfWidth}>
-            <input
-              {...register("name", {
-                required: "Imie jest wymagane",
-              })}
-              placeholder="Imię i nazwisko"
-              className={errors.name ? classes.error : ""}
-            />
-            <ErrorMessage
-              errors={errors}
-              name="name"
-              render={({ message }) => (
-                <p
-                  style={{
-                    position: "absolute",
-                    top: "50%",
-                    transform: "translate(0%, -50%)",
-                    right: 30,
-                    color: "red",
-                    fontSize: "13px",
-                  }}
-                >
-                  {message}
-                </p>
-              )}
-            />
-          </div>
-          <div className={classes.halfWidth}>
-            <input
-              {...register("email", {
-                required: "Email jest wymagany",
-                validate: (value) =>
-                  value.includes("@") || "email musi zawierać @",
-              })}
-              placeholder="email"
-              className={errors.email ? classes.error : ""}
-            />
-            <ErrorMessage
-              errors={errors}
-              name="email"
-              render={({ message }) => (
-                <p
-                  style={{
-                    position: "absolute",
-                    top: "50%",
-                    transform: "translate(0%, -50%)",
-                    right: 30,
-                    color: "red",
-                    fontSize: "13px",
-                  }}
-                >
-                  {message}
-                </p>
-              )}
-            />
-          </div>
-        </div>
-
-        <div className={classes.message}>
-          <textarea
-            {...register("message", {
-              required: "Napisz kilka zdań",
-              minLength: { value: 10, message: "conajmniej dwa :)" },
-            })}
-            placeholder="message"
-            className={errors.message ? classes.error : ""}
-          />
-          <ErrorMessage
-            errors={errors}
-            name="message"
-            render={({ message }) => (
-              <p
-                style={{
-                  position: "absolute",
-                  bottom: 20,
-                  right: 30,
-                  color: "red",
-                  fontSize: "13px",
-                }}
-              >
-                {message}
-              </p>
-            )}
-          />
-        </div>
-
-        <div className={classes.action}>
-          <Button sec name="Wyślij" type="submit" sm />
-        </div>
-      </form>
-    </div>
+      {!submitted ? (
+        <Form setSubmitted={setSubmitted} />
+      ) : (
+        <h1>Dzięki za wiadomść!</h1>
+      )}
+    </>
   );
 };
 
