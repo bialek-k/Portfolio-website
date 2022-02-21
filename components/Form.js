@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
+import Link from "next/link";
 
 import styles from "./Form.module.scss";
 
@@ -70,6 +71,9 @@ const Form = ({ setSubmitted }) => {
         />
       </div>
       <div className={styles.action}>
+        <Link href="mailto:krzysztof.bialek1@gmail.com">
+          <p>krzysztof.bialek1@gmail.com</p>
+        </Link>
         <Button sec name="Wyślij" type="submit" sm />
       </div>
     </form>
