@@ -4,7 +4,7 @@
   flex-direction: column;
   margin: 30px auto;
   align-items: center;
-  width: 80%;
+  width: 90%;
 
   .errorText {
     color: red;
@@ -52,7 +52,12 @@
   padding: 20px 0px;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  & p {
+    color: rgb(161, 161, 161);
+    cursor: pointer;
+  }
 }
 
 .errorStyle {

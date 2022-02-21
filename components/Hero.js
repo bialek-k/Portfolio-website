@@ -1,19 +1,19 @@
 import Button from "./Button";
-import classes from "./Hero.module.scss";
+import styles from "./Hero.module.scss";
 
 const Hero = () => {
   return (
-    <section className={classes.hero}>
-      <div className={classes.heroPhoto}></div>
-      <div className={classes.heroDescription}>
+    <section className={styles.hero}>
+      <div className={styles.heroPhoto}></div>
+      <div className={styles.heroDescription}>
         <p>Web Developer</p>
         <h1>Krzysztof Białek</h1>
-        <p className={classes.desc}>
+        <p className={styles.desc}>
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut lavbore et dolore magna aliqua. Ut enim
           ad minim veniam, quis nostrud{" "}
         </p>
-        <div className={classes.buttons}>
+        <div className={styles.buttons}>
           <Button name={"Github"} sec href={"https://github.com/bialek-k"} />
         </div>
       </div>

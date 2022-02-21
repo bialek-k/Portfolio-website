@@ -1,11 +1,11 @@
 import React from "react";
-import classes from "./Button.module.css";
+import styles from "./Button.module.css";
 
 const Button = ({ name, sec, sm, onClick, href }) => {
   return (
     <button
-      className={`${classes["btn"]} ${sec && classes.secondary} ${
-        sm && classes.small
+      className={`${styles["btn"]} ${sec && styles.secondary} ${
+        sm && styles.small
       }`}
       onClick={onClick && onClick}
     >
