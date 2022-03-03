@@ -1,5 +1,7 @@
 import styles from "../styles/blog.module.scss";
 
+import { gql, GraphQLClient } from "graphql-request";
+
 const blog = () => {
   return (
     <div className={styles.container}>
@@ -66,5 +68,44 @@ const blog = () => {
     </div>
   );
 };
+
+const query = gql`
+  query {
+    allPosts {
+      id
+      title
+      content
+    }
+  }
+`;
+
+export async function getStaticProps() {
+  const endpoint = "https://graphql.datocms.com/";
+  const graphQLClient = new GraphQLClient(endpoint, {
+    headers: {
+      "content-type": "application/json",
+      authorization: "Bearer ef2f1084a7d36b511396d1678112db",
+    },
+  });
+
+  const posts = await graphQLClient.request(query);
+  console.log(posts);
+  return {
+    props: posts,
+  };
+}
+
+// export async function getStaticPaths() {
+//   const endpoint = "https://graphql.datocms.com/";
+//   const graphQLClient = new GraphQLClient(endpoint, {
+//     headers: {
+//       "content-type": "application/json",
+//       authorization: "Bearer ef2f1084a7d36b511396d1678112db",
+//     },
+//   });
+
+//   const posts = await graphQLClient.request(query);
+//   console.log(posts);
+// }
 
 export default blog;
