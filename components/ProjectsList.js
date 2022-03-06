@@ -1,42 +1,31 @@
 import ProjectItem from "./ProjectItem";
+import styles from "./ProjectsList.module.scss";
 
-import sucharPhoto from "../assets/suchar-romana.png";
-import WeatherApp from "../assets/weather-app.png";
-import PortfolioWebsite from "../assets/portfolio-website.png";
+const ProjectsList = ({ datodata }) => {
+  const data = datodata.data.allProjects;
+  console.log(data);
 
-const ProjectsList = () => {
+  let number = 1;
   return (
     <>
-      <ProjectItem
-        img={sucharPhoto}
-        title={"Suchar Romana"}
-        desc={
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lavbore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
-        }
-        tech={"HTML CSS JavaScript React"}
-        github={"https://github.com/bialek-k/Sucharromana-app"}
-        demo={"https://bialek-k.github.io/Sucharromana-app/"}
-      />
-      <ProjectItem
-        img={WeatherApp}
-        title={"Weather App"}
-        desc={
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lavbore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
-        }
-        tech={"HTML CSS JavaScript React"}
-        rev
-        github={"https://github.com/bialek-k/Weather-App"}
-        demo={"https://bialek-k.github.io/Weather-App/"}
-      />
-      <ProjectItem
-        img={PortfolioWebsite}
-        title={"Portfolio Website"}
-        desc={
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lavbore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
-        }
-        tech={"HTML CSS JavaScript React Next.js"}
-        github={"https://github.com/bialek-k"}
-      />
+      <section className={styles.projects}>
+        <h1>Projekty</h1>
+        {data.map((project) => {
+          number++;
+          return (
+            <ProjectItem
+              key={project.id}
+              img={project.thumbnail.url}
+              title={project.title}
+              desc={project.description}
+              tech={project.technology}
+              github={project.github}
+              demo={project.demo}
+              num={number}
+            />
+          );
+        })}
+      </section>
     </>
   );
 };

@@ -1,12 +1,14 @@
-import Image from "next/image";
 import Button from "./Button";
 import styles from "./ProjectItem.module.scss";
 
-const ProjectItem = ({ img, title, desc, tech, rev, github, demo }) => {
+import { StructuredText } from "react-datocms";
+
+const ProjectItem = ({ img, title, desc, tech, github, demo, num }) => {
+  console.log(num);
   return (
-    <div className={`${styles["card"]} ${rev && styles.cardRevers}`}>
+    <div className={`${styles["card"]} ${num % 2 && styles.cardRevers}`}>
       <div className={styles.photo}>
-        <Image src={img} />
+        <img src={img} />
       </div>
       <div className={styles.description}>
         <h1>{title}</h1>
@@ -16,7 +18,7 @@ const ProjectItem = ({ img, title, desc, tech, rev, github, demo }) => {
           <Button name={"Github"} sm href={github} />
         </div>
         <div className={styles.tech}>
-          <p>{tech}</p>
+          <StructuredText data={tech} />
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import Hero from "../components/Hero";
-import Projects from "../components/Projects";
+import ProjectsList from "../components/ProjectsList";
 
 import { request } from "../lib/datocms";
 
@@ -7,6 +7,16 @@ const HOMEPAGE_QUERY = `
 query MyQuery {
   allProjects {
     title
+    description
+    id
+    technology {
+      value
+    }
+    thumbnail {
+      url
+    }
+    github
+    demo
   }
 }
 
@@ -17,19 +27,16 @@ export async function getStaticProps() {
     query: HOMEPAGE_QUERY,
   });
 
-  console.log(data);
-
   return {
     props: { data },
   };
 }
 
 export default function Home(props) {
-  console.log(props);
   return (
     <>
       <Hero />
-      <Projects />
+      <ProjectsList datodata={props} />
     </>
   );
 }
