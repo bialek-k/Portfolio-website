@@ -1,11 +1,26 @@
 import Link from "next/link";
 import Head from "next/head";
+
+import { useState } from "react";
+
 import { useRouter } from "next/router";
 import styles from "./Header.module.scss";
+import Image from "next/image";
+
+import { useTheme } from "next-themes";
+
+import DarkModeButton from "../assets/DarkMode.svg";
 
 const Header = () => {
+  const [toggle, setToggle] = useState(true);
   const router = useRouter();
+  const { theme, setTheme } = useTheme();
 
+  if (toggle) {
+    setTheme("light");
+  } else {
+    setTheme("dark");
+  }
   return (
     <>
       <Head>
@@ -24,6 +39,13 @@ const Header = () => {
               <p>KB</p>
             </a>
           </Link>
+        </div>
+        <div className={styles.darkMode}>
+          <Image
+            src={DarkModeButton}
+            width={70}
+            onClick={() => setToggle((prevState) => !prevState)}
+          />
         </div>
         <nav className={styles.nav}>
           <ul className={styles.navList}>

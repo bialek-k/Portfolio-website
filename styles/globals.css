@@ -1,17 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap");
 
+:root {
+  --color-primary-text: #474747;
+  --color-primary-background: #ffffff;
+}
+
+[data-theme="dark"] {
+  --color-primary-text: #efefef;
+  --color-primary-background: #0a1929;
+}
+
 * {
   font-family: Poppins;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: var(--color-primary-text);
 }
 h1,
 h2,
 h3,
 h4 {
   line-height: 100%;
-
   margin: 0;
   padding: 0;
 }

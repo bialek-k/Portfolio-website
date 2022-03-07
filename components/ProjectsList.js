@@ -3,7 +3,6 @@ import styles from "./ProjectsList.module.scss";
 
 const ProjectsList = ({ datodata }) => {
   const data = datodata.data.allProjects;
-  console.log(data);
 
   let number = 1;
   return (

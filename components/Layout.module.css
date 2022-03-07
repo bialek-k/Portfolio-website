@@ -1,5 +1,19 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background: var(--color-primary-background);
+  color: var(--color-primary-text);
+}
+
 .container {
-  margin: 0 auto;
   width: min(1024px, 85vw);
-  /* background-color: rgb(216, 216, 216); */
+  position: relative;
+}
+.darkMode {
+  position: fixed;
+  top: 0;
+  right: 20px;
 }

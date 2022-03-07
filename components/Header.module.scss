@@ -24,26 +24,30 @@ $base-color: rgba(253, 187, 17, 0.8);
       text-decoration: none;
     }
   }
-}
 
-.nav {
-  width: 30%;
+  .darkMode {
+    margin-left: 220px;
+  }
 
-  .navList {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    color: inherit;
+  .nav {
+    width: 30%;
 
-    .link {
+    .navList {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
       color: inherit;
-      font-size: 20px;
-      text-decoration: none;
-    }
 
-    .active {
-      color: $base-color;
-      /* font-weight: bold; */
+      .link {
+        color: inherit;
+        font-size: 20px;
+        text-decoration: none;
+      }
+
+      .active {
+        color: $base-color;
+        /* font-weight: bold; */
+      }
     }
   }
 }
