@@ -3,14 +3,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  /* width: 100vw; */
   background: var(--color-primary-background);
   color: var(--color-primary-text);
 }
 
 .container {
   width: min(1024px, 85vw);
-  position: relative;
 }
 .darkMode {
   position: fixed;

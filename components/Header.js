@@ -9,7 +9,8 @@ import Image from "next/image";
 
 import { useTheme } from "next-themes";
 
-import DarkModeButton from "../assets/DarkMode.svg";
+import Light from "../assets/DarkMode.svg";
+import LightDark from "../assets/DarkMode_dark.svg";
 
 const Header = () => {
   const [toggle, setToggle] = useState(true);
@@ -42,7 +43,7 @@ const Header = () => {
         </div>
         <div className={styles.darkMode}>
           <Image
-            src={DarkModeButton}
+            src={toggle ? Light : LightDark}
             width={70}
             onClick={() => setToggle((prevState) => !prevState)}
           />

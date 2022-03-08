@@ -3,11 +3,23 @@
 :root {
   --color-primary-text: #474747;
   --color-primary-background: #ffffff;
+  --color-primary-button-background: white;
+  --color-primary-form-input: white;
+  --color-primary-form-text: #474747;
+  --shadow-primary-photo: #c6c6c6;
 }
 
 [data-theme="dark"] {
-  --color-primary-text: #efefef;
+  --color-primary-text: #eeeeee;
+  --color-primary-form-text: #eeeeee;
   --color-primary-background: #0a1929;
+  --color-primary-button-background: transparent;
+  --color-primary-form-input: #eeeeee;
+  --shadow-primary-photo: #6e6e6e;
+}
+
+html {
+  height: 100%;
 }
 
 * {
