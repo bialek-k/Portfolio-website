@@ -11,9 +11,9 @@ const Post = ({ title, publishDate, content }) => {
       <div className={styles.content}>
         <StructuredText data={content} />
       </div>
-      <div className={styles.readMore}>
+      {/* <div className={styles.readMore}>
         <span>Czytaj więcej</span>
-      </div>
+      </div> */}
     </div>
   );
 };

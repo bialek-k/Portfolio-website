@@ -4,7 +4,6 @@ import styles from "./ProjectItem.module.scss";
 import { StructuredText } from "react-datocms";
 
 const ProjectItem = ({ img, title, desc, tech, github, demo, num }) => {
-  console.log(num);
   return (
     <div className={`${styles["card"]} ${num % 2 && styles.cardRevers}`}>
       <div className={styles.photo}>

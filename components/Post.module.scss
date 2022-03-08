@@ -1,5 +1,7 @@
 .blogPost {
   margin-bottom: 100px;
+  padding: 20px;
+  border-radius: 15px;
   .title {
     margin-bottom: 30px;
   }
@@ -7,5 +9,9 @@
     display: flex;
     justify-content: flex-end;
     cursor: pointer;
+  }
+
+  &:hover {
+    background: rgba(158, 158, 158, 0.164);
   }
 }
