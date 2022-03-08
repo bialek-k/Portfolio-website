@@ -1,8 +1,7 @@
 import Header from "./Header";
 import styles from "./Layout.module.css";
-import Image from "next/image";
 
-import background_1 from "../assets/background_1.svg";
+import Footer from "./Footer";
 
 const Layout = ({ children }) => {
   return (
@@ -10,6 +9,7 @@ const Layout = ({ children }) => {
       <div className={styles.container}>
         <Header />
         <main className={styles.main}>{children}</main>
+        <Footer />
       </div>
     </div>
   );

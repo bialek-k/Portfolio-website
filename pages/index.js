@@ -3,6 +3,9 @@ import ProjectsList from "../components/ProjectsList";
 
 import { request } from "../lib/datocms";
 
+import Image from "next/image";
+import sep1 from "../assets/Background_1.svg";
+
 const HOMEPAGE_QUERY = `
 query MyQuery {
   allProjects {
@@ -36,6 +39,7 @@ export default function Home(props) {
   return (
     <>
       <Hero />
+      <Image src={sep1} />
       <ProjectsList datodata={props} />
     </>
   );

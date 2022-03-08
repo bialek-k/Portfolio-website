@@ -7,13 +7,6 @@
   color: var(--color-primary-text);
 }
 
-.wrapper::before {
-  content: url("../assets//Background_1.svg");
-  position: absolute;
-  top: 0;
-  width: 100vw;
-}
-
 .container {
   width: min(1024px, 85vw);
 }
