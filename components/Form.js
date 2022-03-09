@@ -16,6 +16,11 @@ const Form = ({ setSubmitted }) => {
 
   const onSubmit = (data) => {
     setSubmitted(true);
+
+    fetch("/api/mail/", {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
   };
 
   return (
