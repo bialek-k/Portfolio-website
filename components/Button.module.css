@@ -9,11 +9,20 @@
   font-size: 1.7rem;
   cursor: pointer;
   background: var(--color-primary-button-background);
+  transition: 0.3s;
+}
+.btn:hover {
+  background: rgba(253, 187, 17, 0.8);
 }
 
 .secondary {
   background: rgba(253, 187, 17, 0.8);
+  transition: 0.3s;
   color: white;
+}
+
+.secondary:hover {
+  background: var(--color-primary-button-background);
 }
 
 .small {

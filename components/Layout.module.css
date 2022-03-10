@@ -8,8 +8,14 @@
 }
 
 .container {
-  width: min(1024px, 85vw);
+  /* width: min(1400px, 85vw); */
+  /* background-color: orange; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 .darkMode {
   position: fixed;
   top: 0;
