@@ -1,7 +1,23 @@
 .projects {
-  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
 
   h1 {
-    font-size: 3.8rem;
+    margin-bottom: 6rem;
+    text-align: center;
+    letter-spacing: 0.7rem;
   }
+  // margin-bottom: 2rem;
 }
+
+// .projects {
+//   padding-top: 30px;
+
+//   h1 {
+//     font-size: 3.8rem;
+//   }
+// }

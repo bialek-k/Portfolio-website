@@ -1,46 +1,87 @@
 .hero {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-top: 150px;
+  margin-bottom: 5rem;
 
   .heroPhoto {
-    background: url(../assets/hero_photo.jpeg);
+    background: url("../assets//hero_photo.jpeg");
     background-position: 0px 0px;
     background-size: cover;
-    width: 420px;
-    height: 420px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    border: 15px solid white;
-    box-shadow: 0px 0px 20px 10px var(--shadow-primary-photo);
+    border: 0.3rem solid white;
+    box-shadow: 0px 0px 10px 2px var(--shadow-primary-photo);
+    margin-bottom: 1rem;
   }
 
   .heroDescription {
-    width: 53%;
-    .desc {
-      margin-top: 15px;
-      color: var(--color-primary-text);
-    }
+    text-align: center;
+    font-size: 0.8rem;
+    width: 80%;
+
     & p:first-child {
-      font-size: 1.2rem;
-      letter-spacing: 0.3resm;
-      margin-bottom: 10px;
+      font-size: 0.8rem;
+      letter-spacing: 0.3rem;
+      margin-bottom: 5px;
       color: var(--color-primary-text);
     }
 
     & h1 {
-      font-size: 3.9rem;
+      font-size: 1.5rem;
       margin-bottom: 20px;
     }
-
-    & p {
-      font-size: 1.2rem;
-    }
     .buttons {
-      width: 100%;
-      margin-top: 50px;
-      display: flex;
-      justify-content: flex-end;
+      display: none;
     }
   }
 }
+
+// .hero {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   margin-top: 150px;
+
+//   .heroPhoto {
+//     background: url(../assets/hero_photo.jpeg);
+//     background-position: 0px 0px;
+//     background-size: cover;
+//     width: 420px;
+//     height: 420px;
+//     border-radius: 50%;
+//     border: 15px solid white;
+//     box-shadow: 0px 0px 20px 10px var(--shadow-primary-photo);
+//   }
+
+//   .heroDescription {
+//     width: 53%;
+//     .desc {
+//       margin-top: 15px;
+//       color: var(--color-primary-text);
+//     }
+//     & p:first-child {
+//       font-size: 1.2rem;
+//       letter-spacing: 0.3resm;
+//       margin-bottom: 10px;
+//       color: var(--color-primary-text);
+//     }
+
+//     & h1 {
+//       font-size: 3.9rem;
+//       margin-bottom: 20px;
+//     }
+
+//     & p {
+//       font-size: 1.2rem;
+//     }
+//     .buttons {
+//       width: 100%;
+//       margin-top: 50px;
+//       display: flex;
+//       justify-content: flex-end;
+//     }
+//   }
+// }

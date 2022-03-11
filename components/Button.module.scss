@@ -1,4 +1,32 @@
 .btn {
+  width: 4rem;
+  height: 1.5rem;
+  border: 1px solid rgba(253, 187, 17, 0.8);
+  border-radius: 0.2rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: var(--color-primary-button-background);
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .secondary {
+    background: rgba(253, 187, 17, 0.8);
+    transition: 0.3s;
+    color: white;
+  }
+
+  .small {
+    width: 2rem;
+    height: 1rem;
+    font-size: 0.6rem;
+    border-radius: 15px;
+  }
+}
+
+/* .btn {
   width: 200px;
   margin-right: 20px;
   height: 70px;
@@ -35,4 +63,4 @@
 .btn a {
   text-decoration: none;
   color: inherit;
-}
+} */
