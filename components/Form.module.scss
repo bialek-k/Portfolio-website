@@ -1,67 +1,103 @@
 .form {
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  margin: 30px auto;
+  justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 100%;
 
-  .errorText {
-    color: red;
-    font-size: 0.9rem;
-    margin: 15px 0px;
+  .userInfo {
     width: 100%;
-    text-align: left;
+
+    .halfWidth {
+      & input {
+        width: 100%;
+      }
+    }
+  }
+
+  .message {
+    width: 100%;
+    textarea {
+      resize: none;
+      width: 100%;
+    }
   }
 
   & input,
   textarea {
-    font-size: 0.8rem;
-    padding: 15px 10px;
-    border-radius: 5px;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
     border: 1px solid rgba(138, 138, 138, 0.226);
     box-shadow: 1px 1px 7px 3px rgb(225 225 225 / 29%);
     background: var(--color-primary-form-input);
   }
 }
-.userInfo {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 100%;
-  gap: 20px;
-}
 
-.halfWidth {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
+// .form {
+//   display: flex;
+//   justify-content: center;
+//   flex-direction: column;
+//   margin: 30px auto;
+//   align-items: center;
+//   width: 90%;
 
-.message {
-  width: 100%;
-  position: relative;
-  & textarea {
-    width: 100%;
-    margin-top: 15px;
-    min-height: 120px;
-    resize: vertical;
-  }
-}
+//   .errorText {
+//     color: red;
+//     font-size: 0.9rem;
+//     margin: 15px 0px;
+//     width: 100%;
+//     text-align: left;
+//   }
 
-.action {
-  // background-color: red;
-  padding: 20px 0px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  & p {
-    color: rgb(161, 161, 161);
-    cursor: pointer;
-  }
-}
+//   & input,
+//   textarea {
+//     font-size: 0.8rem;
+//     padding: 15px 10px;
+//     border-radius: 5px;
+//     border: 1px solid rgba(138, 138, 138, 0.226);
+//     box-shadow: 1px 1px 7px 3px rgb(225 225 225 / 29%);
+//     background: var(--color-primary-form-input);
+//   }
+// }
+// .userInfo {
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+//   width: 100%;
+//   gap: 20px;
+// }
 
-.errorStyle {
-  background: rgb(250, 211, 211);
-  border: 1px solid red;
-}
+// .halfWidth {
+//   display: flex;
+//   flex-direction: column;
+//   position: relative;
+// }
+
+// .message {
+//   width: 100%;
+//   position: relative;
+//   & textarea {
+//     width: 100%;
+//     margin-top: 15px;
+//     min-height: 120px;
+//     resize: vertical;
+//   }
+// }
+
+// .action {
+//   // background-color: red;
+//   padding: 20px 0px;
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   & p {
+//     color: rgb(161, 161, 161);
+//     cursor: pointer;
+//   }
+// }
+
+// .errorStyle {
+//   background: rgb(250, 211, 211);
+//   border: 1px solid red;
+// }

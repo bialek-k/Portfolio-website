@@ -1,11 +1,18 @@
 .container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  // background-color: red;
 
   .photo {
     display: none;
+  }
+
+  .form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 3rem auto;
+    align-items: center;
+    // background: red;
+    width: 80%;
   }
 }
 
