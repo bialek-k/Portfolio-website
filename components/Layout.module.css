@@ -5,10 +5,10 @@
   align-items: center;
   background: var(--color-primary-background);
   color: var(--color-primary-text);
+  overflow: hidden;
 }
 
 .container {
-  /* width: min(1400px, 85vw); */
   /* background-color: orange; */
   display: flex;
   flex-direction: column;

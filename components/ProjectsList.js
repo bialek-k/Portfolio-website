@@ -8,7 +8,7 @@ const ProjectsList = ({ datodata }) => {
   return (
     <>
       <section className={styles.projects}>
-        <h1>Projekty</h1>
+        <h1 className={styles.projectsTitle}>Projekty</h1>
         {data.map((project) => {
           number++;
           return (

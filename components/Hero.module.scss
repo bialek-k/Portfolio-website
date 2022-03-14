@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 
   .heroPhoto {
     background: url("../assets//hero_photo.jpeg");
@@ -19,7 +19,7 @@
 
   .heroDescription {
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     width: 80%;
 
     & p:first-child {
