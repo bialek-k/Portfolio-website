@@ -6,24 +6,25 @@
   font-size: 0.7rem;
   font-weight: 600;
   background: var(--color-primary-button-background);
+  transition: 0.3s;
 
   a {
     text-decoration: none;
     color: inherit;
   }
+}
 
-  .secondary {
-    background: rgba(253, 187, 17, 0.8);
-    transition: 0.3s;
-    color: white;
-  }
+.small {
+  width: 4.5rem;
+  height: 2rem;
+  font-size: 0.9rem;
+  border-radius: 0.3rem;
+}
 
-  .small {
-    width: 2rem;
-    height: 1rem;
-    font-size: 0.6rem;
-    border-radius: 15px;
-  }
+.secondary {
+  background: rgba(253, 187, 17, 0.8);
+  transition: 0.3s;
+  color: white;
 }
 
 /* .btn {

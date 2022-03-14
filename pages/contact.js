@@ -15,7 +15,7 @@ const contact = () => {
     <>
       <div className={styles.container}>
         <div className={styles.title}>
-          <h1>Bądźmy w kontakcie!</h1>
+          <h1 className={styles.titleHeader}>Bądźmy w kontakcie!</h1>
         </div>
         <div className={styles.formContent}>
           <div className={styles.description}>

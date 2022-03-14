@@ -1,8 +1,23 @@
 .container {
-  // background-color: red;
+  margin-top: 2rem;
+  width: 100vw;
 
-  .photo {
-    display: none;
+  .description {
+    margin-top: 2rem;
+    .photo {
+      margin: 1rem auto 0 auto;
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+      border-radius: 50%;
+      border: 0.2rem solid white;
+      box-shadow: 0px 0px 10px 2px var(--shadow-primary-photo);
+    }
+  }
+
+  .titleHeader {
+    font-size: 1.2rem;
+    text-align: center;
   }
 
   .form {
@@ -11,7 +26,6 @@
     flex-direction: column;
     margin: 3rem auto;
     align-items: center;
-    // background: red;
     width: 80%;
   }
 }
