@@ -14,6 +14,7 @@ import LightDark from "../assets/DarkMode_dark.svg";
 
 const Header = () => {
   const [toggle, setToggle] = useState(true);
+  const [mobileActive, setMobileActive] = useState(false);
   const router = useRouter();
   const { theme, setTheme } = useTheme();
 
@@ -33,9 +34,14 @@ const Header = () => {
         <div className={styles.mobileLogo}>
           <p>KB</p>
         </div>
-        <button className={styles.hamburger}>
-          <span className={`${styles.["hamburger__box"]} ${styles.active}`}>
-            <span className={styles.hamburger__inner}></span>
+        <button
+          className={`${styles.hamburger} ${
+            mobileActive && styles.hamburgerActive
+          }`}
+          onClick={() => setMobileActive((prevState) => !prevState)}
+        >
+          <span className={styles.hamburgerBox}>
+            <span className={styles.hamburgerInner}></span>
           </span>
         </button>
       </div>

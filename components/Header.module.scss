@@ -1,7 +1,11 @@
 // $base-color: rgba(253, 187, 17, 0.8);
 
 .container {
-  display: none;
+  // display: none;
+  .logo,
+  .darkMode {
+    display: none;
+  }
 }
 .mobileNav {
   width: 100vw;
@@ -10,60 +14,63 @@
   align-items: center;
   justify-content: space-between;
 
-  @mixin hamburger-line {
-    width: 100%;
-    height: 3px;
-    position: absolute;
-  }
-
   .hamburger {
-    display: inline-block;
     padding: 10px;
+    display: inline-block;
     cursor: pointer;
     background-color: transparent;
     border: 0;
     margin: 0;
-
-    .hamburger__box {
-      width: 32px;
-      height: 15px;
-      display: inline-block;
-      position: relative;
-
-      .hamburger__inner {
-        @include hamburger-line;
-        // background: black;
-
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-
-        &::before,
-        &::after {
-          @include hamburger-line;
-          background: black;
-
-          content: "";
-          left: 0;
-        }
-        &::before {
-          top: -10px;
-        }
-        &::after {
-          top: 10px;
-        }
-      }
-    }
   }
-  .active .hamburger__inner {
-    background: none;
+  .hamburgerBox {
+    width: 35px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
   }
 
-  .active .hamburger__inner:before {
+  @mixin hamburgerLine {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+  }
+
+  .hamburgerInner {
+    @include hamburgerLine;
+
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.1s 0.2s ease-in-out;
+  }
+
+  .hamburgerInner::before,
+  .hamburgerInner::after {
+    @include hamburgerLine;
+
+    content: "";
+    left: 0;
+    transition: transform 0.2s 0.2s ease-in-out;
+  }
+
+  .hamburgerInner::before {
+    top: -10px;
+  }
+
+  .hamburgerInner::after {
+    top: 10px;
+  }
+
+  .hamburgerActive .hamburgerInner {
+    background-color: transparent;
+  }
+
+  .hamburgerActive .hamburgerInner::before {
     transform: translateY(10px) rotate(45deg);
   }
 
-  .active .hamburger__inner:after {
+  .hamburgerActive .hamburgerInner::after {
     transform: translateY(-10px) rotate(-45deg);
   }
 
