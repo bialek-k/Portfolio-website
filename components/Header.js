@@ -33,8 +33,8 @@ const Header = () => {
         <div className={styles.mobileLogo}>
           <p>KB</p>
         </div>
-        <button className={`${styles.hamburger} ${styles.["active"]}` }>
-          <span className={styles.hamburger__box}>
+        <button className={styles.hamburger}>
+          <span className={`${styles.["hamburger__box"]} ${styles.active}`}>
             <span className={styles.hamburger__inner}></span>
           </span>
         </button>

@@ -13,7 +13,6 @@
   @mixin hamburger-line {
     width: 100%;
     height: 3px;
-    background: black;
     position: absolute;
   }
 
@@ -33,6 +32,7 @@
 
       .hamburger__inner {
         @include hamburger-line;
+        // background: black;
 
         left: 0;
         top: 50%;
@@ -41,6 +41,7 @@
         &::before,
         &::after {
           @include hamburger-line;
+          background: black;
 
           content: "";
           left: 0;
@@ -55,7 +56,7 @@
     }
   }
   .active .hamburger__inner {
-    background: transparent;
+    background: none;
   }
 
   .active .hamburger__inner:before {
