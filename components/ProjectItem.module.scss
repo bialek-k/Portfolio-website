@@ -25,9 +25,8 @@
       margin-top: 1rem;
       display: flex;
       font-size: 0.8rem;
-      // width: 85%;
-      justify-content: flex-start;
-      // opacity: 0.5;
+      justify-content: center;
+      gap: 5%;
     }
     .btn {
       display: flex;
@@ -48,15 +47,6 @@
 }
 
 //REVERS
-.cardRevers {
-  flex-direction: row-reverse;
-  .description {
-    text-align: right;
-    .tech {
-      justify-content: flex-end;
-    }
-  }
-}
 
 @media (min-width: 768px) {
   .card {
@@ -79,6 +69,16 @@
         width: 100%;
         // background: red;
       }
+
+      .tech {
+        display: flex;
+        justify-content: left;
+        width: 100%;
+        flex-wrap: wrap;
+        & p {
+          margin: 0;
+        }
+      }
     }
 
     .photo {
@@ -91,15 +91,6 @@
       font-size: 2rem;
       margin-bottom: 20px;
       width: 100%;
-    }
-
-    .tech {
-      display: flex;
-      justify-content: flex-start;
-      width: 100%;
-      gap: 30px;
-      opacity: 0.7;
-      color: var(--color-primary-text);
     }
   }
 
@@ -130,11 +121,23 @@
       }
     }
     .tech {
-      // background: red;
-      width: auto;
+      // background: blue;
+      // width: auto;
     }
   }
 }
+
+/*
+.cardRevers {
+  flex-direction: row-reverse;
+  .description {
+    text-align: right;
+    .tech {
+      justify-content: flex-end;
+    }
+  }
+}
+*/
 
 // .card {
 //   display: flex;

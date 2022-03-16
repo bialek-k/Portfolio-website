@@ -2,11 +2,9 @@
 .container {
   display: flex;
   justify-content: space-between;
-  // background: orange;
   align-items: center;
   width: 100%;
   overflow: hidden;
-  // background: red;
   padding: 1rem;
 
   .hamburger,
@@ -22,7 +20,6 @@
     width: 200px;
     background: black;
     transform: translateX(200px);
-    // box-shadow: -1px -1px 7px 7px #32323296;
 
     .navList {
       display: flex;
@@ -110,5 +107,48 @@
 
   .hamburgerActive .hamburgerInner::after {
     transform: translateY(-10px) rotate(-45deg);
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    .hamburger {
+      display: none;
+    }
+
+    .nav {
+      display: flex;
+      position: relative;
+      transform: translateY(0);
+      height: auto;
+      background: transparent;
+
+      .navList {
+        flex-direction: row;
+
+        gap: 10px;
+        & li a {
+          color: black;
+          font-size: 1.2rem;
+        }
+        .active {
+          color: rgba(253, 187, 17, 0.8);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    .nav {
+      justify-content: flex-end;
+      .navList {
+        gap: 20px;
+        & li a {
+          font-size: 2rem;
+        }
+      }
+    }
   }
 }
