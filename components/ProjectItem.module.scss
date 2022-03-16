@@ -18,15 +18,9 @@
 
     & p {
       font-size: 0.7rem;
-      text-align: right;
       margin-bottom: 1rem;
     }
 
-    .btn {
-      display: flex;
-      gap: 0.7rem;
-      justify-content: left;
-    }
     .tech {
       margin-top: 1rem;
       display: flex;
@@ -35,6 +29,13 @@
       justify-content: space-evenly;
       opacity: 0.5;
     }
+  }
+
+  .btn {
+    display: flex;
+    gap: 0.7rem;
+    width: 100%;
+    justify-content: center;
   }
 
   .photo {
@@ -89,6 +90,11 @@
     width: 55%;
     position: relative;
 
+    .btn {
+      justify-content: flex-start;
+      width: 100%;
+    }
+
     .descriptionShort p {
       font-size: 0.7rem;
       text-align: left;
@@ -104,6 +110,11 @@
       .tech {
         justify-content: flex-end;
       }
+    }
+    .btn {
+      justify-content: flex-end;
+      width: 100%;
+      // background: red;
     }
   }
 }
