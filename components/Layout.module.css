@@ -9,7 +9,7 @@
 }
 
 .container {
-  /* background-color: orange; */
+  width: min(1440px, 90vw);
   display: flex;
   flex-direction: column;
   justify-content: center;
