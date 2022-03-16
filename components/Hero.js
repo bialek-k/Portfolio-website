@@ -14,7 +14,7 @@ const Hero = () => {
           ad minim veniam, quis nostrud{" "}
         </p>
         <div className={styles.buttons}>
-          <Button name={"Github"} sec href={"https://github.com/bialek-k"} />
+          <Button name={"Github"} sec sm href={"https://github.com/bialek-k"} />
         </div>
       </div>
     </section>
