@@ -46,7 +46,7 @@ const Header = () => {
         <div className={styles.darkMode}>
           <Image
             src={toggle ? Light : LightDark}
-            width={70}
+            width={60}
             onClick={() => setToggle((prevState) => !prevState)}
           />
         </div>

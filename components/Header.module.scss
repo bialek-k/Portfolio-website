@@ -135,7 +135,7 @@
     .darkMode {
       display: inline-block;
       position: absolute;
-      top: -50px;
+      top: -90px;
       left: 50%;
     }
 
@@ -155,7 +155,7 @@
 
         gap: 10px;
         & li a {
-          color: black;
+          color: var(--color-primary-text);
           font-size: 1.2rem;
         }
         .active {
@@ -171,7 +171,7 @@
     .nav {
       justify-content: flex-end;
       .navList {
-        gap: 20px;
+        gap: 30px;
         & li a {
           // font-size: 2rem;
         }
