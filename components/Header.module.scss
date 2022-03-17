@@ -3,9 +3,27 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 80%;
   overflow: hidden;
   padding: 1rem;
+  margin-bottom: 1rem;
+
+  .logo {
+    background: rgba(253, 187, 17, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    & a {
+      text-decoration: none;
+      & p {
+        color: white;
+      }
+    }
+  }
 
   .hamburger,
   .nav {
@@ -112,6 +130,15 @@
 
 @media (min-width: 768px) {
   .container {
+    margin-bottom: 5rem;
+
+    .darkMode {
+      display: inline-block;
+      position: absolute;
+      top: -50px;
+      left: 50%;
+    }
+
     .hamburger {
       display: none;
     }
@@ -146,7 +173,7 @@
       .navList {
         gap: 20px;
         & li a {
-          font-size: 2rem;
+          // font-size: 2rem;
         }
       }
     }
