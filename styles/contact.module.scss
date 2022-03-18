@@ -30,6 +30,77 @@
   }
 }
 
+@media (min-width: 768px) {
+  .container {
+    // background: red;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      .titleHeader {
+        font-size: 1.8rem;
+      }
+      // background: blue;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    .form {
+      margin: 0;
+      flex-direction: row;
+    }
+    .title {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    .formContent {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .description {
+        margin: 0;
+        width: 350px;
+        height: 350px;
+        // width: 50%;
+        & h1 {
+          margin-bottom: 40px;
+          font-size: 2.5rem;
+        }
+        & p {
+          font-size: 1.3rem;
+        }
+
+        & svg {
+          position: absolute;
+          top: 30px;
+          left: 310px;
+        }
+        .photo {
+          // margin: 0 auto;
+          margin-bottom: 50px;
+          width: 300px;
+          height: 300px;
+          overflow: hidden;
+          border-radius: 50%;
+          border: 10px solid white;
+          box-shadow: 0px 0px 20px 10px var(--shadow-primary-photo);
+        }
+      }
+    }
+
+    .formContent {
+      display: flex;
+      justify-content: center;
+      .form {
+        width: 50%;
+      }
+    }
+  }
+}
+
 // .container {
 //   display: flex;
 //   flex-direction: column;
