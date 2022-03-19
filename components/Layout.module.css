@@ -5,11 +5,18 @@
   align-items: center;
   background: var(--color-primary-background);
   color: var(--color-primary-text);
+  overflow: hidden;
 }
 
 .container {
-  width: min(1024px, 85vw);
+  width: min(1024px, 90vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
+
 .darkMode {
   position: fixed;
   top: 0;

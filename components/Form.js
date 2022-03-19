@@ -79,7 +79,7 @@ const Form = ({ setSubmitted }) => {
         <Link href="mailto:krzysztof.bialek1@gmail.com">
           <p>krzysztof.bialek1@gmail.com</p>
         </Link>
-        <Button sec name="Wyślij" type="submit" sm />
+        <Button name="Wyślij" type="submit" sm />
       </div>
     </form>
   );

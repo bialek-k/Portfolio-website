@@ -39,7 +39,7 @@ export default function Home(props) {
   return (
     <>
       <Hero />
-      <Image src={sep1} />
+      {/* <Image src={sep1} /> */}
       <ProjectsList datodata={props} />
     </>
   );
