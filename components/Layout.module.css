@@ -9,7 +9,7 @@
 }
 
 .container {
-  width: min(1440px, 90vw);
+  width: min(1024px, 90vw);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,8 +21,4 @@
   position: fixed;
   top: 0;
   right: 20px;
-}
-
-.main {
-  /* width: min(1440px, 90vw); */
 }

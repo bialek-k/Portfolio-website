@@ -27,12 +27,21 @@
     margin: 3rem auto;
     align-items: center;
     width: 80%;
+    .subMessage {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      & h1 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+    }
   }
 }
 
 @media (min-width: 768px) {
   .container {
-    // background: red;
     display: flex;
     flex-direction: column;
 
@@ -40,7 +49,6 @@
       .titleHeader {
         font-size: 1.8rem;
       }
-      // background: blue;
     }
   }
 }
@@ -79,7 +87,6 @@
           left: 310px;
         }
         .photo {
-          // margin: 0 auto;
           margin-bottom: 50px;
           width: 300px;
           height: 300px;
@@ -87,6 +94,14 @@
           border-radius: 50%;
           border: 10px solid white;
           box-shadow: 0px 0px 20px 10px var(--shadow-primary-photo);
+        }
+      }
+
+      .form {
+        .subMessage {
+          & h1 {
+            font-size: 2rem;
+          }
         }
       }
     }

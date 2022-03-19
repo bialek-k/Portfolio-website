@@ -21,7 +21,6 @@ const contact = () => {
           <div className={styles.description}>
             <div className={styles.photo}>
               <Image src={heroPhoto} className={styles.photoItem} />
-              {/* <div className={styles.photoItem}></div> */}
             </div>
           </div>
           <div className={styles.form}>
