@@ -68,6 +68,7 @@ const Header = () => {
                   className={`${styles["link"]} ${
                     router.pathname === "/" && styles.active
                   }`}
+                  onClick={() => setMobileActive(false)}
                 >
                   Start
                 </a>
@@ -79,6 +80,7 @@ const Header = () => {
                   className={`${styles["link"]} ${
                     router.pathname === "/blog" && styles.active
                   }`}
+                  onClick={() => setMobileActive(false)}
                 >
                   Blog
                 </a>
@@ -90,6 +92,7 @@ const Header = () => {
                   className={`${styles["link"]} ${
                     router.pathname === "/contact" && styles.active
                   }`}
+                  onClick={() => setMobileActive(false)}
                 >
                   Kontakt
                 </a>
