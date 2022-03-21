@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 100%;
   overflow: hidden;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -13,8 +13,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     cursor: pointer;
     & a {
@@ -28,6 +28,10 @@
   .hamburger,
   .nav {
     transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  .hamburger {
+    z-index: 1500;
   }
 
   .nav {
@@ -48,6 +52,10 @@
       list-style: none;
       text-align: center;
 
+      & li:hover {
+        opacity: 0.8;
+      }
+
       & li a {
         text-decoration: none;
         text-align: center;
@@ -65,7 +73,6 @@
     display: none;
   }
   .hamburger {
-    padding: 10px;
     display: inline-block;
     cursor: pointer;
     background-color: transparent;
@@ -73,10 +80,10 @@
     margin: 0;
   }
   .hamburgerActive {
-    transform: translateX(-200px);
+    transform: translateX(-150px);
   }
   .hamburgerBox {
-    width: 35px;
+    width: 30px;
     height: 24px;
     display: inline-block;
     position: relative;
@@ -91,6 +98,7 @@
 
   .hamburgerInner {
     @include hamburgerLine;
+    // background-color: white;
 
     left: 0;
     top: 50%;
@@ -130,12 +138,13 @@
 
 @media (min-width: 768px) {
   .container {
-    margin-bottom: 5rem;
+    // margin-bottom: 5rem;
 
     .darkMode {
       display: inline-block;
       position: absolute;
-      top: -90px;
+      width: 3rem;
+      cursor: pointer;
       left: 50%;
     }
 

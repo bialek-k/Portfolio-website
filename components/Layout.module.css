@@ -9,16 +9,19 @@
 }
 
 .container {
-  width: min(1024px, 90vw);
+  width: min(1024px, 80vw);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .darkMode {
   position: fixed;
   top: 0;
   right: 20px;
+}
+
+.main {
+  min-height: 100vh;
 }

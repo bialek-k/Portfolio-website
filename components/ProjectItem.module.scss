@@ -3,7 +3,6 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 5rem;
 
   .description {
     display: flex;
@@ -17,8 +16,9 @@
     }
 
     & p {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       margin-bottom: 1rem;
+      text-align: center;
     }
 
     .tech {
@@ -52,6 +52,7 @@
   .card {
     flex-direction: row;
     gap: 2rem;
+    margin: 4rem 0 4rem 0;
 
     .description {
       display: flex;
@@ -59,9 +60,14 @@
       width: 40%;
       position: relative;
 
+      & h1 {
+        font-size: 1.7rem;
+      }
+
       & p {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
         margin-bottom: 1rem;
+        text-align: left;
       }
 
       .btn {
@@ -97,7 +103,10 @@
   .cardRevers {
     flex-direction: row-reverse;
     .description {
-      text-align: right;
+      & p,
+      h1 {
+        text-align: right;
+      }
       .tech {
         justify-content: flex-end;
       }

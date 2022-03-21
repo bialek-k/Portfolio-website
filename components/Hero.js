@@ -9,9 +9,10 @@ const Hero = () => {
         <p>Web Developer</p>
         <h1>Krzysztof Białek</h1>
         <p className={styles.desc}>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut lavbore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud{" "}
+          Zawsze pracowałem kreatywnie, ale dopiero podczas programowania mogę w
+          pełni rozwinąć swoje skrzydła. Połączenie duszy artystycznej z chęcią
+          poznawania technicznych zagadnień codziennie pcha mnie do przodu w
+          poznawaniu nowych technologii w świecie frontendu i nie tylko.
         </p>
         <div className={styles.buttons}>
           <Button name={"Github"} sec sm href={"https://github.com/bialek-k"} />
