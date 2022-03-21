@@ -46,8 +46,9 @@ const Header = () => {
         <div className={styles.darkMode}>
           <Image
             src={toggle ? Light : LightDark}
-            width={60}
+            width={"100%"}
             onClick={() => setToggle((prevState) => !prevState)}
+            className={styles.lamp}
           />
         </div>
         <button

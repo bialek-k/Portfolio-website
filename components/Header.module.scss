@@ -30,6 +30,9 @@
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
   }
+  .hamburger {
+    z-index: 1500;
+  }
 
   .nav {
     position: fixed;
@@ -48,6 +51,10 @@
       height: 100%;
       list-style: none;
       text-align: center;
+
+      & li:hover {
+        opacity: 0.8;
+      }
 
       & li a {
         text-decoration: none;
@@ -73,7 +80,7 @@
     margin: 0;
   }
   .hamburgerActive {
-    transform: translateX(-200px);
+    transform: translateX(-150px);
   }
   .hamburgerBox {
     width: 30px;
@@ -91,6 +98,7 @@
 
   .hamburgerInner {
     @include hamburgerLine;
+    // background-color: white;
 
     left: 0;
     top: 50%;
@@ -130,12 +138,13 @@
 
 @media (min-width: 768px) {
   .container {
-    margin-bottom: 5rem;
+    // margin-bottom: 5rem;
 
     .darkMode {
       display: inline-block;
       position: absolute;
-      top: -90px;
+      width: 3rem;
+      cursor: pointer;
       left: 50%;
     }
 

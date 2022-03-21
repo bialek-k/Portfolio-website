@@ -15,14 +15,14 @@ const contact = () => {
     <>
       <div className={styles.container}>
         <div className={styles.title}>
-          <h1 className={styles.titleHeader}>Bądźmy w kontakcie!</h1>
-        </div>
-        <div className={styles.formContent}>
           <div className={styles.description}>
             <div className={styles.photo}>
               <Image src={heroPhoto} className={styles.photoItem} />
             </div>
           </div>
+          <h1 className={styles.titleHeader}>Bądźmy w kontakcie!</h1>
+        </div>
+        <div className={styles.formContent}>
           <div className={styles.form}>
             {!submitted ? (
               <Form setSubmitted={setSubmitted} />
