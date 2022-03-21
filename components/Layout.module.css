@@ -6,7 +6,6 @@
   background: var(--color-primary-background);
   color: var(--color-primary-text);
   overflow: hidden;
-  min-height: 100vh;
 }
 
 .container {
@@ -15,11 +14,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .darkMode {
   position: fixed;
   top: 0;
   right: 20px;
+}
+
+.main {
+  min-height: 100vh;
 }
