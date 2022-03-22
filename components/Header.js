@@ -1,7 +1,9 @@
 import Link from "next/link";
 import Head from "next/head";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
+
+import Navigation from "./Navigation";
 
 import { useRouter } from "next/router";
 import styles from "./Header.module.scss";
@@ -61,46 +63,10 @@ const Header = () => {
             <span className={styles.hamburgerInner}></span>
           </span>
         </button>
-        <nav className={`${styles.nav} ${mobileActive && styles.navActive}`}>
-          <ul className={styles.navList}>
-            <li>
-              <Link href="/">
-                <a
-                  className={`${styles["link"]} ${
-                    router.pathname === "/" && styles.active
-                  }`}
-                  onClick={() => setMobileActive(false)}
-                >
-                  Start
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/blog">
-                <a
-                  className={`${styles["link"]} ${
-                    router.pathname === "/blog" && styles.active
-                  }`}
-                  onClick={() => setMobileActive(false)}
-                >
-                  Blog
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact">
-                <a
-                  className={`${styles["link"]} ${
-                    router.pathname === "/contact" && styles.active
-                  }`}
-                  onClick={() => setMobileActive(false)}
-                >
-                  Kontakt
-                </a>
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <Navigation
+          mobileActive={mobileActive}
+          setMobileActive={setMobileActive}
+        />
       </header>
     </>
   );
