@@ -14,9 +14,9 @@ const Hero = () => {
           poznawania technicznych zagadnień codziennie pcha mnie do przodu w
           poznawaniu nowych technologii w świecie frontendu i nie tylko.
         </p>
-        <div className={styles.buttons}>
+        {/* <div className={styles.buttons}>
           <Button name={"Github"} sec sm href={"https://github.com/bialek-k"} />
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -11,6 +11,7 @@ query MyQuery {
       value
     }
     publishDate
+    shortDescription
   }
 }
 `;
@@ -36,6 +37,7 @@ const blog = (props) => {
             title={post.title}
             publishDate={post.publishDate}
             content={post.content}
+            shortDescription={post.shortDescription}
           />
         );
       })}
