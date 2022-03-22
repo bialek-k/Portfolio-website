@@ -1,0 +1,148 @@
+.hamburger,
+.nav {
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+.hamburger {
+  z-index: 1500;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 200px;
+  background: black;
+  transform: translateX(200px);
+
+  .navList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    list-style: none;
+    text-align: center;
+
+    .active {
+      color: rgba(253, 186, 17, 0.931);
+    }
+
+    & li:hover {
+      opacity: 0.8;
+    }
+
+    & li a {
+      text-decoration: none;
+      text-align: center;
+      color: white;
+      font-size: 1.5rem;
+      line-height: 4rem;
+    }
+  }
+}
+.navActive {
+  transform: translateX(0px);
+}
+
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+}
+.hamburgerActive {
+  transform: translateX(-150px);
+}
+.hamburgerBox {
+  width: 30px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+@mixin hamburgerLine {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+}
+
+.hamburgerInner {
+  @include hamburgerLine;
+  // background-color: white;
+
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.1s 0.2s ease-in-out;
+}
+
+.hamburgerInner::before,
+.hamburgerInner::after {
+  @include hamburgerLine;
+
+  content: "";
+  left: 0;
+  transition: transform 0.2s 0.2s ease-in-out;
+}
+
+.hamburgerInner::before {
+  top: -10px;
+}
+
+.hamburgerInner::after {
+  top: 10px;
+}
+
+.hamburgerActive .hamburgerInner {
+  background-color: transparent;
+}
+
+.hamburgerActive .hamburgerInner::before {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburgerActive .hamburgerInner::after {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    position: relative;
+    transform: translateY(0);
+    height: auto;
+    background: transparent;
+
+    .navList {
+      flex-direction: row;
+
+      gap: 10px;
+      & li a {
+        color: var(--color-primary-text);
+        font-size: 1.2rem;
+      }
+      .active {
+        color: rgba(253, 187, 17, 0.8);
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    justify-content: flex-end;
+    .navList {
+      gap: 30px;
+      & li a {
+      }
+    }
+  }
+}
