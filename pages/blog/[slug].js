@@ -53,7 +53,6 @@ query MyQuery($slug: String) {
     slug
   }
 }
-
 `;
 
 export const getStaticProps = async ({ params }) => {
