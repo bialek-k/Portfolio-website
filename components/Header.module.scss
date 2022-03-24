@@ -74,7 +74,12 @@
   }
 
   .darkMode {
-    display: none;
+    // display: none;
+    display: inline-block;
+    position: absolute;
+    width: 2.3rem;
+    cursor: pointer;
+    left: 48%;
   }
   .hamburger {
     display: inline-block;

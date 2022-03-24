@@ -1,7 +1,7 @@
 import styles from "./Post.module.scss";
 import { StructuredText } from "react-datocms";
 
-const Post = ({ title, publishDate, content }) => {
+const Post = ({ title, publishDate, content, shortDescription }) => {
   return (
     <div className={styles.blogPost}>
       <div className={styles.title}>
@@ -9,7 +9,8 @@ const Post = ({ title, publishDate, content }) => {
         <p>{publishDate}</p>
       </div>
       <div className={styles.content}>
-        <StructuredText data={content} />
+        <p className={styles.shortDesc}>{shortDescription}</p>
+        {/* <StructuredText data={content} /> */}
       </div>
       {/* <div className={styles.readMore}>
         <span>Czytaj więcej</span>

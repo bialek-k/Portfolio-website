@@ -2,6 +2,35 @@
   width: min(860px, 90vw);
   margin: 20px auto;
 }
-// .container {
-//   margin-top: 150px;
-// }
+
+.blogPost {
+  font-size: 0.7rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  padding: 0.6rem;
+
+  .content {
+    margin-top: 0.4rem;
+  }
+  .shortDesc {
+    font-style: italic;
+  }
+}
+
+@media (min-width: 768px) {
+  .blogPost {
+    margin-bottom: 1rem;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.1s ease-in-out;
+
+    &:hover {
+      background: rgba(158, 158, 158, 0.164);
+      transform: scale(1.015);
+    }
+
+    .content {
+      font-size: 1rem;
+    }
+  }
+}
