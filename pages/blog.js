@@ -1,4 +1,3 @@
-import Post from "../components/Post";
 import styles from "../styles/blog.module.scss";
 import Link from "next/link";
 
@@ -13,8 +12,8 @@ const blog = (props) => {
           <Link key={post.slug} href={`/blog/${post.slug}`}>
             <div className={styles.blogPost}>
               <div className={styles.title}>
-                <h1>{post.title}</h1>
                 <p>{post.publishDate}</p>
+                <h1>{post.title}</h1>
               </div>
               <div className={styles.content}>
                 <p className={styles.shortDesc}>{post.shortDescription}</p>
