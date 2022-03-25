@@ -8,12 +8,22 @@
   margin-bottom: 2rem;
   border-radius: 10px;
   padding: 0.6rem;
+  text-align: center;
+
+  .title {
+    & h1 {
+      padding: 0.2rem 0rem;
+      letter-spacing: 0.15rem;
+    }
+  }
 
   .content {
     margin-top: 0.4rem;
+    // opacity: 0.8;
   }
   .shortDesc {
     font-style: italic;
+    // font-weight: 200;
   }
 }
 
@@ -23,6 +33,16 @@
     padding: 20px;
     border-radius: 15px;
     transition: 0.1s ease-in-out;
+
+    .title {
+      & h1 {
+        font-size: 3rem;
+        padding: 0.3rem 0rem;
+      }
+      & p {
+        opacity: 0.7;
+      }
+    }
 
     &:hover {
       background: rgba(158, 158, 158, 0.164);
