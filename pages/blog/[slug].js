@@ -1,15 +1,20 @@
 import { request } from "../../lib/datocms";
-import { StructuredText } from "react-datocms";
+import { StructuredText, Image } from "react-datocms";
 import Link from "next/link";
 import styles from "/styles/blogPost.module.scss";
 
 const BlogPost = ({ postData }) => {
+  console.log(postData);
   return (
     <>
       <div className={styles.blogPost}>
         <div className={styles.title}>
           <h1>{postData.title}</h1>
           <p>{postData.publishDate}</p>
+          <Image
+            data={postData.cover.responsiveImage}
+            className={styles.coverImage}
+          />
         </div>
         <div className={styles.content}>
           <StructuredText data={postData.content} />
@@ -60,6 +65,21 @@ export const getStaticProps = async ({ params }) => {
         title
         publishDate
         slug
+        cover {
+          responsiveImage {
+            alt
+            base64
+            bgColor
+            title
+            aspectRatio
+            height
+            sizes
+            src
+            srcSet
+            webpSrcSet
+            width
+          }
+        }
       }
     }
     `,

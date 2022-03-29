@@ -1,5 +1,6 @@
 import styles from "../styles/blog.module.scss";
 import Link from "next/link";
+import { Image } from "react-datocms";
 
 import { request } from "../lib/datocms";
 
@@ -14,6 +15,12 @@ const blog = (props) => {
               <div className={styles.title}>
                 <p>{post.publishDate}</p>
                 <h1>{post.title}</h1>
+                <Image
+                  data={post.cover.responsiveImage}
+                  className={styles.cover}
+                  objectFit="cover"
+                  objectPosition="50% 50%"
+                />
               </div>
               <div className={styles.content}>
                 <p className={styles.shortDesc}>{post.shortDescription}</p>
@@ -36,6 +43,21 @@ query MyQuery {
     publishDate
     shortDescription
     slug
+    cover {
+      responsiveImage {
+        alt
+        base64
+        bgColor
+        title
+        aspectRatio
+        height
+        sizes
+        src
+        srcSet
+        webpSrcSet
+        width
+      }
+    }
   }
 }
 `;
