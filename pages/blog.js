@@ -13,8 +13,8 @@ const blog = (props) => {
           <Link key={post.slug} href={`/blog/${post.slug}`}>
             <div className={styles.blogPost}>
               <div className={styles.title}>
-                <p>{post.publishDate}</p>
                 <h1>{post.title}</h1>
+                <p>{post.publishDate}</p>
                 <Image
                   data={post.cover.responsiveImage}
                   className={styles.cover}

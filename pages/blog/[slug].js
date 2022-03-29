@@ -4,7 +4,8 @@ import Link from "next/link";
 import styles from "/styles/blogPost.module.scss";
 
 const BlogPost = ({ postData }) => {
-  console.log(postData);
+  const paragraphs = postData.content.value.document.children;
+  console.log(postData.content);
   return (
     <>
       <div className={styles.blogPost}>
@@ -14,10 +15,16 @@ const BlogPost = ({ postData }) => {
           <Image
             data={postData.cover.responsiveImage}
             className={styles.coverImage}
+            objectFit="cover"
+            objectPosition="50% 50%"
           />
         </div>
         <div className={styles.content}>
-          <StructuredText data={postData.content} />
+          {paragraphs.map((p, idx) => (
+            <p className={styles.paragraph} key={idx + 1}>
+              {p.children[0].value}
+            </p>
+          ))}
         </div>
       </div>
       <div className={styles.action}>

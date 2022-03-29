@@ -7,7 +7,7 @@
     // margin-bottom: 2.5rem;
     & h1 {
       font-size: 2rem;
-      margin-bottom: 0.3rem;
+      // margin-bottom: 0.3rem;
       letter-spacing: 0.2rem;
     }
 
@@ -16,9 +16,15 @@
       font-size: 0.8rem;
     }
   }
+  .content {
+    .paragraph {
+      padding: 1rem 0rem;
+    }
+  }
 
   .coverImage {
     margin: 2rem 0rem;
+    height: 250px;
   }
 }
 
