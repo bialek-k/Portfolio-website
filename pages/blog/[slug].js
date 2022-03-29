@@ -4,8 +4,6 @@ import Link from "next/link";
 import styles from "/styles/blogPost.module.scss";
 
 const BlogPost = ({ postData }) => {
-  const paragraphs = postData.content.value.document.children;
-  console.log(postData.content);
   return (
     <>
       <div className={styles.blogPost}>
@@ -20,18 +18,12 @@ const BlogPost = ({ postData }) => {
           />
         </div>
         <div className={styles.content}>
-          {paragraphs.map((p, idx) => (
-            <p className={styles.paragraph} key={idx + 1}>
-              {p.children[0].value}
-            </p>
-          ))}
+          <StructuredText data={postData.content} />
         </div>
       </div>
       <div className={styles.action}>
         <Link passHref href={"/blog/"}>
-          <button>
-            <a href={`/blog/`}>Wszystkie posty</a>
-          </button>
+          <a>Wszystkie posty</a>
         </Link>
       </div>
     </>

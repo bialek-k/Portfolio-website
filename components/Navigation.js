@@ -32,7 +32,7 @@ const Navigation = ({ mobileActive, setMobileActive }) => {
           <Link href="/blog">
             <a
               className={`${styles["link"]} ${
-                router.pathname === "/blog" && styles.active
+                router.pathname.startsWith("/blog") && styles.active
               }`}
               onClick={() => setMobileActive(false)}
             >
