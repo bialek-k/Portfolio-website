@@ -1,8 +1,6 @@
 import { request } from "../../lib/datocms";
 import { StructuredText } from "react-datocms";
-
-import Button from "../../components/Button";
-
+import Link from "next/link";
 import styles from "/styles/blogPost.module.scss";
 
 const BlogPost = ({ postData }) => {
@@ -18,9 +16,11 @@ const BlogPost = ({ postData }) => {
         </div>
       </div>
       <div className={styles.action}>
-        <button>
-          <a href={`/blog/`}>Wszystkie posty</a>
-        </button>
+        <Link passHref href={"/blog/"}>
+          <button>
+            <a href={`/blog/`}>Wszystkie posty</a>
+          </button>
+        </Link>
       </div>
     </>
   );
