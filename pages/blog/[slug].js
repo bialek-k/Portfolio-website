@@ -18,7 +18,17 @@ const BlogPost = ({ postData }) => {
           />
         </div>
         <div className={styles.content}>
-          <StructuredText data={postData.content} />
+          <StructuredText
+            data={postData.content}
+            renderBlock={({ record }) => {
+              switch (record.__typename) {
+                case "ImageRecord":
+                  return <Image data={record.image.responsiveImage} />;
+                default:
+                  return null;
+              }
+            }}
+          />
         </div>
       </div>
       <div className={styles.action}>
@@ -60,6 +70,27 @@ export const getStaticProps = async ({ params }) => {
       article(filter: {slug: {eq: $slug}}) {
         content {
           value
+          blocks {
+            __typename
+            ... on ImageRecord {
+              id
+              image {
+               responsiveImage {
+                alt
+                base64
+                bgColor
+                title
+                aspectRatio
+                height
+                sizes
+                src
+                srcSet
+                webpSrcSet
+                width
+                } 
+              }
+            }
+          }
         }
         title
         publishDate
@@ -92,3 +123,33 @@ export const getStaticProps = async ({ params }) => {
     revalidate: 60,
   };
 };
+
+/*
+`
+    query MyQuery($slug: String) {
+      article(filter: {slug: {eq: $slug}}) {
+        content {
+          value
+        }
+        title
+        publishDate
+        slug
+        cover {
+          responsiveImage {
+            alt
+            base64
+            bgColor
+            title
+            aspectRatio
+            height
+            sizes
+            src
+            srcSet
+            webpSrcSet
+            width
+          }
+        }
+      }
+    }
+    `
+*/
