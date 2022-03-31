@@ -4,17 +4,11 @@
   padding: 0.6rem;
 
   .title {
-    // margin-bottom: 2.5rem;
     text-align: center;
     & h1 {
       font-size: 1.5rem;
       margin-bottom: 0.3rem;
       letter-spacing: 0.2rem;
-    }
-
-    & p {
-      opacity: 0.6;
-      font-size: 0.8rem;
     }
   }
   .content {
@@ -68,10 +62,6 @@
         font-size: 2.5rem;
         margin-bottom: 0.3rem;
         letter-spacing: 0.2rem;
-      }
-
-      & p {
-        opacity: 0.6;
       }
     }
 

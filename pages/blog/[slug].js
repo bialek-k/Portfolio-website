@@ -10,7 +10,6 @@ const BlogPost = ({ postData }) => {
       <div className={styles.blogPost}>
         <div className={styles.title}>
           <h1>{postData.title}</h1>
-          <p>{postData.publishDate}</p>
           <Image
             data={postData.cover.responsiveImage}
             className={styles.coverImage}

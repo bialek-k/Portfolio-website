@@ -14,7 +14,6 @@ const blog = (props) => {
             <div className={styles.blogPost}>
               <div className={styles.title}>
                 <h1>{post.title}</h1>
-                <p>{post.publishDate}</p>
                 <Image
                   data={post.cover.responsiveImage}
                   className={styles.cover}
