@@ -1,4 +1,5 @@
 import { request } from "../../lib/datocms";
+
 import { StructuredText, Image } from "react-datocms";
 import Link from "next/link";
 import styles from "/styles/blogPost.module.scss";
@@ -18,7 +19,17 @@ const BlogPost = ({ postData }) => {
           />
         </div>
         <div className={styles.content}>
-          <StructuredText data={postData.content} />
+          <StructuredText
+            data={postData.content}
+            renderBlock={({ record }) => {
+              switch (record.__typename) {
+                case "ImageRecord":
+                  return <Image data={record.image.responsiveImage} />;
+                default:
+                  return null;
+              }
+            }}
+          />
         </div>
       </div>
       <div className={styles.action}>
@@ -60,6 +71,27 @@ export const getStaticProps = async ({ params }) => {
       article(filter: {slug: {eq: $slug}}) {
         content {
           value
+          blocks {
+            __typename
+            ... on ImageRecord {
+              id
+              image {
+               responsiveImage {
+                alt
+                base64
+                bgColor
+                title
+                aspectRatio
+                height
+                sizes
+                src
+                srcSet
+                webpSrcSet
+                width
+                } 
+              }
+            }
+          }
         }
         title
         publishDate
