@@ -1,4 +1,5 @@
 import { request } from "../../lib/datocms";
+
 import { StructuredText, Image } from "react-datocms";
 import Link from "next/link";
 import styles from "/styles/blogPost.module.scss";
@@ -123,33 +124,3 @@ export const getStaticProps = async ({ params }) => {
     revalidate: 60,
   };
 };
-
-/*
-`
-    query MyQuery($slug: String) {
-      article(filter: {slug: {eq: $slug}}) {
-        content {
-          value
-        }
-        title
-        publishDate
-        slug
-        cover {
-          responsiveImage {
-            alt
-            base64
-            bgColor
-            title
-            aspectRatio
-            height
-            sizes
-            src
-            srcSet
-            webpSrcSet
-            width
-          }
-        }
-      }
-    }
-    `
-*/
