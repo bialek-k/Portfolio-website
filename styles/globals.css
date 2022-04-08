@@ -7,6 +7,7 @@
   --color-primary-form-input: white;
   --color-primary-form-text: #474747;
   --shadow-primary-photo: #c6c6c6;
+  --hamburger-color: rgb(5, 5, 5);
 }
 
 [data-theme="dark"] {
@@ -16,6 +17,7 @@
   --color-primary-button-background: transparent;
   --color-primary-form-input: #eeeeee;
   --shadow-primary-photo: #6e6e6e;
+  --hamburger-color: white;
 }
 
 html {
