@@ -29,9 +29,9 @@ const contact = () => {
             ) : (
               <div className={styles.subMessage}>
                 <h1>Dzięki za wiadomść!</h1>
-                <Link href="/">
+                {/* <Link href="/">
                   <Button name={"Home"} sm sec />
-                </Link>
+                </Link> */}
               </div>
             )}
           </div>
