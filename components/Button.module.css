@@ -1,0 +1,36 @@
+.btn {
+  width: 4rem;
+  height: 1.5rem;
+  border: 1px solid rgba(253, 187, 17, 0.8);
+  border-radius: 0.2rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: var(--color-primary-button-background);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.btn a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.small {
+  width: 4.5rem;
+  height: 2rem;
+  font-size: 0.9rem;
+  border-radius: 0.3rem;
+}
+
+.secondary {
+  background: rgba(253, 187, 17, 0.8);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: white;
+}
+/*# sourceMappingURL=Button.module.css.map */

@@ -1,0 +1,129 @@
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 6rem;
+}
+
+.hero .heroPhoto {
+  background: url("../assets//hero_photo.jpeg");
+  background-position: 0px 0px;
+  background-size: cover;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 0.3rem solid white;
+  -webkit-box-shadow: 0px 0px 10px 2px var(--shadow-primary-photo);
+          box-shadow: 0px 0px 10px 2px var(--shadow-primary-photo);
+  margin-bottom: 1rem;
+}
+
+.hero .heroDescription {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.hero .heroDescription p:first-child {
+  font-size: 0.8rem;
+  letter-spacing: 0.3rem;
+  margin-bottom: 5px;
+  color: var(--color-primary-text);
+}
+
+.hero .heroDescription h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.hero .heroDescription .buttons {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .buttons {
+    display: block;
+  }
+  .hero {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1.3rem;
+    margin-bottom: 9rem;
+  }
+  .hero .heroPhoto {
+    width: 220px;
+    height: 220px;
+    margin: 0;
+    border: 0.6rem solid white;
+  }
+  .hero .heroDescription {
+    width: 50%;
+    text-align: left;
+  }
+  .hero .heroDescription h1 {
+    font-size: 2rem;
+  }
+  .hero .heroDescription .desc {
+    color: var(--color-primary-text);
+  }
+  .hero .heroDescription p:first-child {
+    font-size: 0.8rem;
+    margin-bottom: 0.6rem;
+    opacity: 0.7;
+  }
+  .hero .heroDescription .buttons {
+    width: 100%;
+    margin-top: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 9rem;
+  }
+  .hero .heroPhoto {
+    width: 350px;
+    height: 350px;
+  }
+  .hero .heroDescription {
+    width: 50%;
+    font-size: 1.2rem;
+  }
+  .hero .heroDescription p:first-child {
+    font-size: 1.2rem;
+  }
+  .hero .heroDescription h1 {
+    font-size: 2.5rem;
+  }
+}
+/*# sourceMappingURL=Hero.module.css.map */

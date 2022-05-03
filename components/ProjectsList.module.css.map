@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAC;EACR,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,MAAM,EAAE,gBAAgB;EACxB,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;CAOpB;;AAZD,AAOE,SAPO,CAOP,cAAc,CAAC;EACb,SAAS,EAAE,MAAM;EACjB,aAAa,EAAE,IAAI;EACnB,UAAU,EAAE,MAAM;CACnB",
+    "sources": [
+        "ProjectsList.module.scss"
+    ],
+    "names": [],
+    "file": "ProjectsList.module.css"
+}

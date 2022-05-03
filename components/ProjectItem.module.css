@@ -1,0 +1,191 @@
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 4rem;
+}
+
+.card:nth-last-child(1) {
+  margin-bottom: 1rem;
+}
+
+.card .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .description h1 {
+  margin: 1rem 0 1rem 0;
+  letter-spacing: 0rem;
+}
+
+.card .description p {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.card .description .tech {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.8rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5%;
+}
+
+.card .description .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.7rem;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card .photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .photo img {
+  width: 60%;
+}
+
+@media (min-width: 768px) {
+  .card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 2rem;
+    margin: 4rem 0 4rem 0;
+  }
+  .card .description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 40%;
+    position: relative;
+  }
+  .card .description h1 {
+    font-size: 1.7rem;
+  }
+  .card .description p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  .card .description .btn {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+  }
+  .card .description .tech {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .card .description .tech p {
+    margin: 0;
+  }
+  .card .photo img {
+    width: 100%;
+  }
+  .card h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .cardRevers {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .cardRevers .description p,
+  .cardRevers .description h1 {
+    text-align: right;
+  }
+  .cardRevers .description .tech {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .cardRevers .description .btn {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card .description {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 310px;
+    width: 50%;
+  }
+  .card .description p {
+    font-size: 1rem;
+  }
+}
+
+/*
+.cardRevers {
+  flex-direction: row-reverse;
+  .description {
+    text-align: right;
+    .tech {
+      justify-content: flex-end;
+    }
+  }
+}
+*/
+/*# sourceMappingURL=ProjectItem.module.css.map */

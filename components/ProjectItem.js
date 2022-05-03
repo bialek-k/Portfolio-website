@@ -14,7 +14,7 @@ const ProjectItem = ({ img, title, desc, tech, github, demo, num }) => {
         <p className={styles.descriptionShort}>{desc}</p>
         <div className={styles.btn}>
           {demo && <Button name={"Demo"} sec sm href={demo} />}
-          <Button name={"Github"} sm href={github} />
+          {github && <Button name={"Github"} sm href={github} />}
         </div>
         <div className={styles.tech}>
           <StructuredText data={tech} />
