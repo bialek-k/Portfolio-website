@@ -2,6 +2,7 @@
 
 :root {
   --color-primary-text: #474747;
+  --color-primary-text-white: white;
   --color-primary-background: #ffffff;
   --color-primary-button-background: white;
   --color-primary-form-input: white;
@@ -12,6 +13,7 @@
 
 [data-theme="dark"] {
   --color-primary-text: #eeeeee;
+  --color-primary-text-white: #474747;
   --color-primary-form-text: #474747;
   --color-primary-background: #0a1929;
   --color-primary-button-background: transparent;
