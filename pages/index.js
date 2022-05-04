@@ -1,5 +1,6 @@
 import Hero from "../components/Hero";
 import ProjectsList from "../components/ProjectsList";
+import Technologies from "../components/Technologies";
 
 import { request } from "../lib/datocms";
 
@@ -33,7 +34,7 @@ export default function Home(props) {
   return (
     <>
       <Hero />
-      <p>some</p>
+      <Technologies />
       <ProjectsList datodata={props} />
     </>
   );
