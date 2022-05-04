@@ -14,8 +14,6 @@ const Technologies = () => {
     "GIT",
     "GitHub",
     "TailwindCss",
-    "TailwindCss",
-    "TailwindCss",
   ];
 
   return (
