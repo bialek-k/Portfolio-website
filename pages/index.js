@@ -36,6 +36,7 @@ export default function Home(props) {
       <Hero />
       <Technologies />
       <ProjectsList datodata={props} />
+      <p>test</p>
     </>
   );
 }
