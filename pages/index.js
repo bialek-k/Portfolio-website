@@ -33,6 +33,7 @@ export default function Home(props) {
   return (
     <>
       <Hero />
+      <p>some</p>
       <ProjectsList datodata={props} />
     </>
   );
