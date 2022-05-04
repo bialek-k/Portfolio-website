@@ -20,9 +20,7 @@ const contact = () => {
               <Image src={heroPhoto} className={styles.photoItem} />
             </div>
           </div>
-          {!submitted && (
-            <h1 className={styles.titleHeader}>Bądźmy w kontakcie!</h1>
-          )}
+          <h1 className={styles.titleHeader}>Bądźmy w kontakcie!</h1>
         </div>
         <div className={styles.formContent}>
           <div className={styles.form}>
@@ -30,10 +28,10 @@ const contact = () => {
               <Form setSubmitted={setSubmitted} />
             ) : (
               <div className={styles.subMessage}>
-                <h1>Dziękuję za wiadomość :)</h1>
-                <Link href="/">
+                <h1>Dzięki za wiadomść!</h1>
+                {/* <Link href="/">
                   <Button name={"Home"} sm sec />
-                </Link>
+                </Link> */}
               </div>
             )}
           </div>
