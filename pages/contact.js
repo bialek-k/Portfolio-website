@@ -8,7 +8,7 @@ import heroPhoto from "../public/images/hero_photo.jpeg";
 import Form from "../components/Form";
 import Button from "../components/Button";
 
-const contact = () => {
+const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
 
   return (
