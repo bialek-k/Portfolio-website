@@ -29,6 +29,18 @@ const Navigation = ({ mobileActive, setMobileActive }) => {
           </Link>
         </li>
         <li>
+          <Link href="/about">
+            <a
+              className={`${styles["link"]} ${
+                router.pathname === "/about" && styles.active
+              }`}
+              onClick={() => setMobileActive(false)}
+            >
+              O mnie
+            </a>
+          </Link>
+        </li>
+        <li>
           <Link href="/blog">
             <a
               className={`${styles["link"]} ${
