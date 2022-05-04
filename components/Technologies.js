@@ -18,7 +18,7 @@ const Technologies = () => {
 
   return (
     <main className={styles.container}>
-      <h1 className={styles.title}>Technologie</h1>
+      <h1 className={styles.title}>Moje Technologie</h1>
       <div className={styles.techList}>
         {techData.map((item) => (
           <div className={styles.techItem} key={item}>
