@@ -10,7 +10,7 @@ const blog = (props) => {
     <div className={styles.container}>
       {posts.map((post) => {
         return (
-          <Link key={post.slug} href={`/blog/${post.slug}`}>
+          <Link key={post.slug} passHref href={`/blog/${post.slug}`}>
             <div className={styles.blogPost}>
               <div className={styles.title}>
                 <h1>{post.title}</h1>
@@ -19,6 +19,7 @@ const blog = (props) => {
                   className={styles.cover}
                   objectFit="cover"
                   objectPosition="50% 50%"
+                  alt=""
                 />
               </div>
               <div className={styles.content}>

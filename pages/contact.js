@@ -8,7 +8,7 @@ import heroPhoto from "../public/images/hero_photo.jpeg";
 import Form from "../components/Form";
 import Button from "../components/Button";
 
-const contact = () => {
+const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
 
   return (
@@ -17,7 +17,7 @@ const contact = () => {
         <div className={styles.title}>
           <div className={styles.description}>
             <div className={styles.photo}>
-              <Image src={heroPhoto} className={styles.photoItem} />
+              <Image alt="" src={heroPhoto} className={styles.photoItem} />
             </div>
           </div>
           <h1 className={styles.titleHeader}>Bądźmy w kontakcie!</h1>
@@ -29,9 +29,6 @@ const contact = () => {
             ) : (
               <div className={styles.subMessage}>
                 <h1>Dzięki za wiadomść!</h1>
-                {/* <Link href="/">
-                  <Button name={"Home"} sm sec />
-                </Link> */}
               </div>
             )}
           </div>
@@ -41,4 +38,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;

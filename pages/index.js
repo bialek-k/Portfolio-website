@@ -1,6 +1,6 @@
 import Hero from "../components/Hero";
 import ProjectsList from "../components/ProjectsList";
-import Technologies from "../components/technologies";
+import Technologies from "../components/Technologies";
 
 import { request } from "../lib/datocms";
 
