@@ -2,6 +2,7 @@ import Button from "./Button";
 import styles from "./ProjectItem.module.scss";
 
 import { StructuredText } from "react-datocms";
+import Image from "next/image";
 
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -29,7 +30,7 @@ const ProjectItem = ({ img, title, desc, tech, github, demo, num }) => {
     >
       <div className={`${styles["card"]} ${num % 2 && styles.cardRevers}`}>
         <div className={styles.photo}>
-          <img src={img} />
+          <Image src={img} alt="project image" width={408} height={326} />
         </div>
         <div className={styles.description}>
           <h1>{title}</h1>

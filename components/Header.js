@@ -44,7 +44,7 @@ const Header = () => {
                 router.pathname === "/" && styles.active
               }`}
             >
-              <Image src={toggle ? logo : logo_dark} />
+              <Image src={toggle ? logo : logo_dark} alt="logo white" />
             </a>
           </Link>
         </div>
@@ -54,6 +54,7 @@ const Header = () => {
             width={"100%"}
             onClick={() => setToggle((prevState) => !prevState)}
             className={styles.lamp}
+            alt="logo black"
           />
         </div>
         <button
