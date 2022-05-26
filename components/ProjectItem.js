@@ -9,24 +9,24 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
 const ProjectItem = ({ img, title, desc, tech, github, demo, num }) => {
-  // const control = useAnimation();
-  // const [ref, inView] = useInView();
+  const control = useAnimation();
+  const [ref, inView] = useInView();
 
-  // const projectVariant = {
-  //   visible: { opacity: 1, x: 0, transition: { delay: 0.7, duration: 0.5 } },
-  //   hidden: { opacity: 0, x: num % 2 ? 1024 : -1024 },
-  // };
+  const projectVariant = {
+    visible: { opacity: 1, x: 0, transition: { delay: 0.7, duration: 0.5 } },
+    hidden: { opacity: 0, x: num % 2 ? 250 : -250 },
+  };
 
-  // useEffect(() => {
-  //   inView && control.start("visible");
-  // }, [control, inView]);
+  useEffect(() => {
+    inView && control.start("visible");
+  }, [control, inView]);
 
   return (
     <motion.div
-    // variants={projectVariant}
-    // initial="hidden"
-    // animate={control}
-    // ref={ref}
+      variants={projectVariant}
+      initial="hidden"
+      animate={control}
+      ref={ref}
     >
       <div className={`${styles["card"]} ${num % 2 && styles.cardRevers}`}>
         <div className={styles.photo}>
