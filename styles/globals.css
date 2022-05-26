@@ -33,6 +33,10 @@ html {
   box-sizing: border-box;
   color: var(--color-primary-text);
 }
+
+body {
+  overflow-x: hidden;
+}
 h1,
 h2,
 h3,
