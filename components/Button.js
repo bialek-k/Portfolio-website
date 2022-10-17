@@ -7,8 +7,7 @@ const Button = ({ name, sec, sm, onClick, href }) => {
       className={`${styles["btn"]} ${sec && styles.secondary} ${
         sm && styles.small
       }`}
-      onClick={onClick && onClick}
-    >
+      onClick={onClick && onClick}>
       <a href={href}>{name}</a>
     </button>
   );
