@@ -5,7 +5,6 @@ mail.setApiKey(process.env.SENDGRID_API_KEY);
 export default async function handler(req, res) {
   const body = JSON.parse(req.body);
 
-  console.log(body);
   const message = `
     Name: ${body.name}\r\n
     Email: ${body.email}\r\n
