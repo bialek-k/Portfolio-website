@@ -11,71 +11,53 @@
   <h3 align="center">Portfolio-website</h3>
 
   <p align="center">
-    <a href="https://www.krzysztof-bialek.pl">Odwiedź stronę</a>
+    <a href="https://www.krzysztof-bialek.pl">Live</a>
     ·
   </p>
 </div>
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Spis Treści</summary>
+  <summary>Table of contents</summary>
   <ol>
     <li>
-      <a href="#o-projekcie">O projekcie</a>
+      <a href="#about-the-project">About the project</a>
     </li>
     <li>
-      <a href="#wykorzystane-technologie">Wykorzystane Technologie</a></li>
+      <a href="#technologies">Technologies</a></li>
     </li>
-    <li><a href="#planowane-aktualizacje">Planowane aktualizacje</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
 
 <!-- ABOUT THE PROJECT -->
 
-## O projekcie
+## About the project
 
-Strona wizytówka powstała z myślą o stworzeniu własnego miejsca w sieci do prezentowania moich prac związanych z frontendem oraz dzielenia się zdobytą wiedzą w powstającym blogu. Chciałem równierz wyjść poza tutorial i zbudować coś od 0 w świeżo poznanym frameworku React'a - Next.js
+This Portfolio website was created with idea of creating my own place on the web to showcase my wrok. I also wanted to go beyound "tutorial hell" and build something with scratch in freshly learned Next.js framework. 
 
-Moje główne założenia projektu:
+The main assumptions of the project:
 
-- Zaimplementowanie poznanego Next.js
-- Połączenie strony z Headless CMS (DatoCMS)
-- Implementacja Strapi do obsługi formularza
-- Poznanie i wykorzystanie React Hook Form
+- Implementing the learned Next.js
+- Integrated with Headless CMS (DatoCMS)
+- Implementing the learned React Hook Form
 
-<p align="right">(<a href="#top">Powrót na górę</a>)</p>
+<p align="right">(<a href="#top">Back to top</a>)</p>
 
-### Wykorzystane Technologie
-
-Podczas budowy aplkacji wykorzystałem:
+### Technologies
 
 - React.js
 - Next.js
 - React Hook Form
 - DatoCMS
-- Strapi
+- Swiper
 
-<p align="right">(<a href="#top">Powrót na górę</a>)</p>
-
-<!-- ROADMAP -->
-
-## Planowane aktualizacje
-
-- [x] Połączenie strony z DatoCMS
-- [x] Połączenie formularza kontaktowego z Strapi oraz React Hook Form
-- [ ] Poprawa działania hamburger'a
-- [ ] Dodanie artykułów
-- [ ] Dodanie sekcji "O mnie"
-
-<p align="right">(<a href="#top">Powrót na górę</a>)</p>
-
-<!-- SETUP -->
+<p align="right">(<a href="#top">Back to top</a>)</p>
 
 <!-- CONTACT -->
 
-## Kontakt
+## Contact
 
-email: krzysztof.bialek1@gmail.com | <a href="https://www.linkedin.com/in/bialek-krzysztof">Linkedin</a>
+email: bialekdev@gmail.com | <a href="https://www.linkedin.com/in/bialek-krzysztof">Linkedin</a>
 
-<p align="right">(<a href="#top">Powrót na górę</a>)</p>
+<p align="right">(<a href="#top">Back to top</a>)</p>
